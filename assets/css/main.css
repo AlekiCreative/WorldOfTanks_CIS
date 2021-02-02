@@ -1,0 +1,130 @@
+/*
+=================================
+		FONTS
+=================================		
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+
+/*
+=================================
+		GENERALY
+=================================		
+*/
+
+body{
+	background: #1c1c1e;
+}
+.clear {
+    clear: both;
+}
+
+/*
+=================================
+		NAVIGATION
+=================================		
+*/
+
+.navigation, .navigation a, .navigation .dropdown-menu, .navbar {
+    background-color: #292b2c;
+    color: #a3a3a3;
+	font-family: Arial, "Helvetica CY", Helvetica, sans-serif;
+	font-size: 13px;
+}
+.navbar{
+	padding: 0px!important;
+}
+.navbar .navbar-brand{
+	padding-left:15px!important;
+	font-family: "Roboto Condensed","Arial Narrow",Arial,sans-serif;
+	font-size:15px;
+}
+
+/*
+=================================
+		SIDEBAR
+=================================		
+*/
+.menu {
+    position: fixed;
+    background: #292b2c;
+    color: #a3a3a3;
+    width: 200px;
+    height: 100%;
+    /*margin-top: 62px;*/
+    padding-top: 45px;
+}
+.menu_sublist.active {
+    font-weight: bold;
+	color: #fff!important;
+}
+.menu_sublist:hover {
+    text-decoration: none;
+	color: #fff!important;
+	font-weight: bold;
+}
+
+.menu .menu_list {
+    font-family: open sans,sans-serif;
+    font-size: 14px;
+    border-left: 3px transparent solid;
+    color: #ccc;
+    display: block;
+    padding: 19px 10px 20px 15px;
+}
+.menu .menu_list:hover {
+	color:#fff;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.menu .menu_sublist {
+    
+    font-size: 12px;
+    border-left: 40px transparent solid;
+    color: #ccc;
+    display: block;
+    padding: 19px 10px 20px 15px;
+    transition: all ease-in .2s;
+    color: #a3a3a3;
+}
+
+
+.menu li .menu_sublist {
+    padding-top: 0;
+}
+
+.menu li .menu_list {
+    padding-bottom: 15px;
+}
+.menu ul {
+    padding-left: 0px;
+    list-style: none;
+}
+
+.active.menu_list {
+	color: #fff;
+	font-weight: bold;
+}	
+.active {
+    background: #1c1c1e;
+    color: #a3a3a3;
+}
+.active:hover {
+	color: #fff!important;
+	text-decoration: none!important;
+}
+.table td {
+    border: 0px;
+}
+
+.table thead th {
+    border-bottom: 0px;
+}
+.dropdown-container {
+	display: none;
+	background-color: #1c1c1e;
+	padding-top: 10px;
+}
+
+
+

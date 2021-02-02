@@ -1,0 +1,41 @@
+               __             __   __               __   ___             
+\  / \ / \  / /  \    |  /\  |__) /__` |__/ \ /    |  \ |__  |\ | | |__/ 
+ \/   |   \/  \__/ \__/ /~~\ |  \ .__/ |  \  |     |__/ |___ | \| | |  \ 
+-----------------------------------------------------------------------------
+
+_Obsah_
+	>_Popis
+	>_Použitá technologie
+	>_Historie vývoje
+	>_Pracuje se na
+
+
+>_Popis
+	World of Tanks Clan Information System je nástroj pro zjednodušení správu klanu.
+	WoT CIS není vyvíjen ani financován společnosti Wargaming. Projekt je vyvíjen pod licencí GNU General Public License v3.0 viz LICENSE.
+	Použivání na vlastní riziko, autor nenese žádnou odpovědnost za škody ani za únik dat
+
+	Funkce
+		Statistika klanu
+		Plánování eventu
+		Správá klanového Discord serveru
+		Informace o členech
+
+>_Použitá technologie
+	Font Awesome
+	Bootstrap
+	JQuery
+
+>_Historie vývoje
+	0.1. Zahájen vývoj (2. Února 2021)
+		｜ Grafický návrh (Navigační a sidebar, klanový dashboard)
+		｜ Základní struktura souboru
+
+>_Pracuje se na
+
+	Grafický návrh
+		Nastavení
+		Osobní dashboard
+		Statistika dashboard
+
+	Optimalizace css
