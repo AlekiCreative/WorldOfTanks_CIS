@@ -54,7 +54,7 @@ Použivání na vlastní riziko, autor nenese žádnou odpovědnost za škody an
 <!-- Historie vývoje -->
 ## Historie vývoje
 <details>
-  <summary>0.1. Zahájen vývoj (1. Února 2021)</summary>
+  <summary>0.1. Zahájen vývoj (2. Února 2021)</summary>
   <li>Grafický návrh </li>
   <li>Základní struktura souboru </li>
 </details>
@@ -73,10 +73,11 @@ Použivání na vlastní riziko, autor nenese žádnou odpovědnost za škody an
 ## Pracuje se na
 
 *	Grafický návrh
-*		Nastavení
-*		Osobní dashboard
-*		Statistika dashboard
-*
+<ul>	
+<li>Nastavení</li>
+<li>Osobní dashboard</li>
+<li>Statistika dashboard</li>
+</ul>
 *	Optimalizace css
 
 
