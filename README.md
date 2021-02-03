@@ -1,5 +1,6 @@
 ![version-shield]
 ![languages-shield]
+.
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -53,7 +54,7 @@ Použivání na vlastní riziko, autor nenese žádnou odpovědnost za škody an
 <!-- Historie vývoje -->
 ## Historie vývoje
 <details>
-  <summary>0.1. Zahájen vývoj (1. Února 2021)</summary>
+  <summary>0.1. Zahájen vývoj (2. Února 2021)</summary>
   <li>Grafický návrh </li>
   <li>Základní struktura souboru </li>
 </details>
@@ -69,6 +70,19 @@ Použivání na vlastní riziko, autor nenese žádnou odpovědnost za škody an
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
 
+
+## Pracuje se na
+
+*	Grafický návrh
+<ul>	
+<li>Nastavení</li>
+<li>Osobní dashboard</li>
+<li>Statistika dashboard</li>
+</ul>
+*	Optimalizace css
+
+
+>>>>>>> 3707a3950118214cab968bbc2a5dfbd7cb6b3f19
 <!-- LICENSE -->
 ## License
 
