@@ -30,7 +30,6 @@
     <li><a href="#historie-vývoje">Historie vývoje</a></li>
     <li><a href="#screenshoty">Screenshoty</a></li>
     <li><a href="#použitá-technologie">Použitá technologie</a></li>
-    <li><a href="#pracuje-se-na">Pracuje se na</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#autor">Autor</a></li>
 </ol>
@@ -69,16 +68,6 @@ Použivání na vlastní riziko, autor nenese žádnou odpovědnost za škody an
 * [Font Awesome](https://fontawesome.com)
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
-
-## Pracuje se na
-
-*	Grafický návrh
-*		Nastavení
-*		Osobní dashboard
-*		Statistika dashboard
-*
-*	Optimalizace css
-
 
 <!-- LICENSE -->
 ## License

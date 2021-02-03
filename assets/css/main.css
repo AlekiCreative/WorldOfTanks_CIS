@@ -81,7 +81,6 @@ body{
     
     font-size: 12px;
     border-left: 40px transparent solid;
-    color: #ccc;
     display: block;
     padding: 19px 10px 20px 15px;
     transition: all ease-in .2s;
@@ -125,6 +124,61 @@ body{
 	background-color: #1c1c1e;
 	padding-top: 10px;
 }
+
+
+
+
+/*
+=================================
+		Personal Archievements
+=================================		
+*/
+
+.personal-archievements{
+	background: rgb(108,21,20);
+	background: linear-gradient(90deg, rgba(108,21,20,0.4009978991596639) 0%, rgba(108,21,20,1) 49%, rgba(108,21,20,0.36738445378151263) 100%);
+}
+
+/*
+=================================
+		All stat
+=================================		
+*/
+
+.all-stats_heading {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #e9e2bf;
+    margin-bottom: 23px;
+}
+
+.all-stats-grid_inner {
+    max-width: 1328px;
+    margin: 0 16px;
+    box-sizing: border-box;
+    font-size: 0;
+    line-height: 0;
+    white-space: nowrap;
+    will-change: transform;
+}
+.all-stats_item {
+    height: 31px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 14px;
+    line-height: normal;
+    border-bottom: 1px solid #333335;
+    color: #a29e87;
+    padding: 0 10px;
+}
+
+
+
+
+
 
 
 

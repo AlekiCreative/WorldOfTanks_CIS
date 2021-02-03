@@ -10,7 +10,7 @@
 .clan-stat .col span{font-size: 30px; font-weith: 700;}
 .poster .col div:hover{background-color: rgba(255, 255, 255, 0.08);transition: background .2s; text-decoration: none; color: white }
 .poster .col div{text-decoration: none; color: white;}
-#dashboard {font-weight: bold; color:white;}
+#clan-dashboard {font-weight: bold; color:white;}
 </style>
 
 

@@ -1,24 +1,26 @@
 <div class="menu">
             <div class="sidenav">
             <ul>
-                <li><a href="#" class="menu_list">Dashboard</a></li>
+                <li><a href="index.php" class="menu_list" id="dashboard">Dashboard</a></li>
                                
-				<div class="menu_list dropdown-btn">alik_99</div>
+				<div class="menu_list dropdown-btn" id="player">alik_99</div>
 				<div class="dropdown-container">
 					<ul class="">
-						<li><a href="#" class="menu_sublist active" id="active"> Dashboard</a></li>
-						<li><a href="#" class="menu_sublist" id="active"> Garáž</a></li>
-						<li><a href="#" class="menu_sublist" id="active"> Kontakty</a></li>
-						<li><a href="#" class="menu_sublist" id="active"> Kampaň</a></li>
-						<li><a href="#" class="menu_sublist" id="active"> Ban list</a></li>
+						<li id="player-dashboard"><a href="player-dashboard.php" class="menu_sublist" id="active"> Dashboard</a></li>
+						<li id="player-garage"><a href="#" class="menu_sublist" id="active"> Garáž</a></li>
+						<li id="player-booster"><a href="#" class="menu_sublist" id="active"> Zálohy</a></li>
+						<li id="player-booster"><a href="#" class="menu_sublist" id="active"> Úspěchy</a></li>
+						<li id="player-contact"><a href="#" class="menu_sublist" id="active"> Kontakty</a></li>
+						<li id="player-campain"><a href="#" class="menu_sublist" id="active"> Kampaň</a></li>
+						<li id="player-bans"><a href="#" class="menu_sublist" id="active"> Ban list</a></li>
 					</ul>
 				</div>
 				
 				
-				<div class="menu_list dropdown-btn"><img src="https://eu.wargaming.net/clans/media/clans/emblems/cl_145/500164145/emblem_24x24.png" width="18px" height="18px"> Klan CSSTB</div>
+				<div class="menu_list dropdown-btn" id="clan"><img src="https://eu.wargaming.net/clans/media/clans/emblems/cl_145/500164145/emblem_24x24.png" width="18px" height="18px"> Klan CSSTB</div>
 				<div class="dropdown-container">
 					<ul class="">				
-						<li><a href="#" class="menu_sublist" id="active"> Dashboard</a></li>           
+						<li><a href="clan-dashboard.php" class="menu_sublist" id="active"> Dashboard</a></li>           
 						<li><a href="#" class="menu_sublist" id="active"> Vývěšká</a></li>           
 						<li><a href="#" class="menu_sublist" id="active"> Pravidla</a></li>           
 						<li><a href="#" class="menu_sublist" id="active"> Personál</a></li>           
@@ -28,7 +30,7 @@
 					</ul>
 				</div>
 				
-				<div class="menu_list dropdown-btn">Tankopedie</div>
+				<div class="menu_list dropdown-btn" id="tankopedie">Tankopedie</div>
 				<div class="dropdown-container">
 					<ul class="">				
 						<li><a href="#" class="menu_sublist" id="active"> Seznam vozidel</a></li>           
@@ -38,7 +40,7 @@
 						<li><a href="#" class="menu_sublist" id="active"> Osobní mise</a></li>
 					</ul>
 				</div>
-				<div class="menu_list dropdown-btn">Statistika</div>
+				<div class="menu_list dropdown-btn" id="statistika">Statistika</div>
 				<div class="dropdown-container">
 					<ul class="">				
 						<li><a href="#" class="menu_sublist" id="active"> Dashboard</a></li>           
@@ -48,8 +50,8 @@
 					</ul>
 				</div>
 				
-				<li><a href="#" class="menu_list" id=""> Discord managment</a></li>
-				<li><a href="#" class="menu_list" id=""> Nastavení</a></li>
+				<li><a href="#" class="menu_list" id="discord-managment"> Discord managment</a></li>
+				<li><a href="#" class="menu_list" id="nastaveni"> Nastavení</a></li>
 				
 				
             </ul>
