@@ -13,9 +13,18 @@
 
 body{
 	background: #1c1c1e;
+	font-family: "Roboto Condensed","Arial Narrow",Arial,sans-serif;
 }
 .clear {
     clear: both;
+}
+
+footer{
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.personal-list th div,
+.garage-list th div{
+	padding-left: 15px;
 }
 
 /*
@@ -126,7 +135,151 @@ body{
 }
 
 
+.about-title,
+.clan-board-title{
+	font-size: 35px;
+	font-family: "Roboto Condensed","Arial Narrow",Arial,sans-serif;
+	padding-bottom: 25px;
+}
 
+
+
+/*
+=================================
+	Garage
+=================================		
+*/
+
+.garage-info,
+.garage-list,
+.garage-top{
+	font-family: "Roboto Condensed","Arial Narrow",Arial,sans-serif;
+}
+.garage-info{
+	background-color: #333;
+}
+.garage-btn a:hover{
+	text-decoration: none; color: #ff7e00!important;
+}
+.garage-btn a{
+	text-decoration: none;
+}
+.garage-list th,
+.personal-list th{
+	color: white;
+	border-top: none;
+}
+.garage-list tbody tr:hover,
+.personal-list tbody tr:hover{
+	border-top: none;
+	background-color: rgba(255, 255, 255, 0.08);
+	transition: background .2s; 
+	text-decoration: none; 
+	color: white; 
+	cursor: pointer;
+	
+}
+
+/*
+=================================
+	About
+=================================		
+*/
+
+.about-subtitle{
+	font-size: 25px;
+	font-family: "Roboto Condensed","Arial Narrow",Arial,sans-serif;
+}
+
+
+/*
+=================================
+	Dashboard klanu eventy
+=================================		
+*/
+
+.dashboard-event-title{
+	color: white;
+	font-size: 24px;
+	font-family: "Roboto Condensed", Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-weight: 400;
+	padding-left: 150px;
+	padding-bottom: 50px;
+}
+
+.dashboard-event-content{
+	color: white;
+	font-size: 18px;
+	font-family: "Roboto Condensed", Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-weight: 600;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+/*
+=================================
+		Vývěska
+=================================		
+*/
+
+.board-container{
+	padding: 40px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+	margin-bottom: 40px;
+}
+.dashboard-board-container{
+	padding: 20px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+	text-align: left;
+	height: 150px;
+	margin: 20px;
+	font-size: 14px;
+}
+.dashboard-board-container:hover{
+	background-color: rgba(255, 255, 255, 0.08);
+	transition: background .2s; 
+	text-decoration: none; 
+	color: white; 
+	
+	}
+
+.dashboard-board-container a{
+	font-family: open sans,sans-serif;
+	color: #ccc;
+	text-decoration: none;
+}
+
+.board-footer{
+	border-top: 1px solid rgba(255, 255, 255, 0.3);
+	padding-top: 15px;
+}
+.clan-board .author{
+	font-weight: 700;
+	padding-right: 10px;
+	float: left;
+}
+.clan-board .date{
+	font-size: 12px;
+	font-weight: 400;
+	padding-top: 5px;
+	float: left;
+
+}
+.clan-board .archiv{
+	font-size: 12px;
+	font-weight: 400;
+	padding-top: 5px;
+	float: right;
+}
+.clan-board .update{
+	font-size: 12px;
+	font-weight: 400;
+	padding-top: 5px;
+	padding-right: 20px;
+	float: right;
+}
 
 /*
 =================================
@@ -138,6 +291,16 @@ body{
 	background: rgb(108,21,20);
 	background: linear-gradient(90deg, rgba(108,21,20,0.4009978991596639) 0%, rgba(108,21,20,1) 49%, rgba(108,21,20,0.36738445378151263) 100%);
 }
+/*
+=================================
+		Top player
+=================================		
+*/
+.top-player{
+	background: rgb(108,21,20);
+	background: linear-gradient(90deg, rgba(108,21,20,0.4009978991596639) 0%, rgba(108,21,20,1) 49%, rgba(108,21,20,0.36738445378151263) 100%);
+}
+
 
 /*
 =================================
@@ -173,6 +336,104 @@ body{
     border-bottom: 1px solid #333335;
     color: #a29e87;
     padding: 0 10px;
+}
+
+/*
+=================================
+		Barevné schéma
+=================================		
+*/
+
+div.velmi-spatne{
+border-left: 2px #000000 solid;
+background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,0.4514180672268907) 0%, rgba(0,0,0,0) 75%, rgba(0,0,0,0) 100%);
+}
+div.spatne{
+border-left: 2px #cd3333 solid;
+background: rgb(205,51,51);
+background: linear-gradient(90deg, rgba(205,51,51,0.45) 0%, rgba(205,51,51,0) 75%, rgba(205,51,51,0) 100%);
+}
+div.podprumerne{
+border-left: 2px #d77900 solid;
+background: rgb(215,121,0);
+background: linear-gradient(90deg, rgba(215,121,0,0.4542191876750701) 0%, rgba(205,51,51,0) 75%, rgba(205,51,51,0) 100%);
+}
+div.prumerne{
+border-left: 2px #d7b600 solid;
+background: rgb(215,182,0);
+background: linear-gradient(90deg, rgba(215,182,0,0.45) 0%, rgba(205,51,51,0) 75%, rgba(205,51,51,0) 100%);
+}
+div.dobre{
+border-left: 2px #6d9521 solid;
+background: rgb(109,149,33);
+background: linear-gradient(90deg, rgba(109,149,33,0.45) 0%, rgba(205,51,51,0) 75%, rgba(205,51,51,0) 100%);
+}
+
+div.velmi-dobre{
+border-left: 2px #4c762e solid;
+background: rgb(76,118,46);
+background: linear-gradient(90deg, rgba(76,118,46,0.45) 0%, rgba(205,51,51,0) 75%, rgba(205,51,51,0) 100%);
+}
+
+div.vyborne{
+border-left: 2px #4a92b7 solid;
+background: rgb(74,146,183);
+background: linear-gradient(90deg, rgba(74,146,183,0.45) 0%, rgba(205,51,51,0) 75%, rgba(205,51,51,0) 100%);
+}
+
+div.unikatni{
+border-left: 2px #83579d solid;
+background: rgb(131,87,157);
+background: linear-gradient(90deg, rgba(131,87,157,0.45) 0%, rgba(205,51,51,0) 75%, rgba(205,51,51,0) 100%);
+}
+
+div.superunikatni{
+border-left: 2px #5a3175 solid;
+background: rgb(90,49,117);
+background: linear-gradient(90deg, rgba(90,49,117,0.45) 0%, rgba(205,51,51,0) 75%, rgba(205,51,51,0) 100%);
+}
+
+
+span.velmi-spatne{
+color: #000000 ;
+
+}
+span.spatne{
+color:#cd3333 ;
+
+}
+span.podprumerne{
+color: #d77900 
+
+}
+span.prumerne{
+color: #d7b600 ;
+
+}
+span.dobre{
+color:#6d9521 ;
+
+}
+
+span.velmi-dobre{
+color: #4c762e ;
+
+}
+
+span.vyborne{
+color: #4a92b7 ;
+
+}
+
+span.unikatni{
+color: #83579d ;
+
+}
+
+span.superunikatni{
+color:#5a3175 ;
+
 }
 
 

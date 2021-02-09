@@ -43,7 +43,7 @@
                     <a class="nav-link" href="#"><?php echo(date("d. ") . date("F ") . date("Y"));?></a>
                   </li>
 				  
-				  <!-- Notification Bell -->
+				  <!-- Notification Bell 
 				  
                   <li class="nav-item" id="notification">
 					<li class="nav-item dropdown">
@@ -64,16 +64,14 @@
 						
                     </div>
                   </li>
-					
-					
-					
+
                   </li>
-				  
+				  -->
                   <li class="nav-item" id="username">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">alik_99</a>
 						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="profile.php"><i class="fas fa-user"></i> Profile</a>
-							<a class="dropdown-item" href="setting.php"><i class="fas fa-cog"></i> Setting</a>
+							<a class="dropdown-item" href="https://worldoftanks.eu/cs/community/accounts/529439356-alik_99/"><i class="fas fa-user"></i> WoT Profile</a>
+							<a class="dropdown-item" href="https://eu.wargaming.net/clans/wot/500164145/"><i class="fas fa-user"></i> WoT Clan</a>
 							<a class="dropdown-item" href="auth/logout.php"><i class="fas fa-sign-out-alt"></i> Log out</a>
 						</div>
 				  </li>

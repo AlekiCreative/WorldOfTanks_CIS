@@ -9,8 +9,7 @@
 .main-info .col span{font-size: 40px; font-weith: 700;}
 .clan-stat .col span{font-size: 30px; font-weith: 700;}
 #player,#player-dashboard {font-weight: bold!important; color:white!important;}
-.garage-btn a:hover{text-decoration: none; color: #ff7e00!important;};
-.garage-btn a{text-decoration: none;}
+
 </style>
 
 
@@ -21,7 +20,7 @@
 			
 				<div class="col my-auto" style="">
 					<div>WN7</div>
-					<span style="color: #cd3333;">553,94</span>
+					<span class="spatne">553,94</span>
 				</div>
 				
 				<div class="col">
@@ -36,7 +35,7 @@
 				
 				<div class="col my-auto">
 					<div>WN8</div>
-					<span style="color: #cd3333;">542,10</span>
+					<span class="spatne">542,10</span>
 				</div>
 				
 			</div>
@@ -109,7 +108,7 @@
 
 </section>
 
-<section class="garage" style="margin-top: 80px; color: white; font-size: 14px;">
+<section class="garage-top" style="margin-top: 80px; color: white; font-size: 14px;">
 	<div class="container">		
 		
 	<div class="text-center">
@@ -240,12 +239,12 @@
 	</div>
 </section>
 
-<section class="all-stat" style="padding: 60px 0 20px 0; color: white; font-size: 15px;">
+<section class="all-stat" style="padding: 60px 0 60px 0; color: white; font-size: 15px;">
     <div class="container">
 		<div class="text-center">
 			<div class="row">
 				<div class="col my-auto" style="text-align: left;">
-					<h4>Celkové skóre</h4>
+					<h4 style="padding-bottom: 15px;">Celkové skóre</h4>
 					<div class="row">
 						<div class="col my-auto">
 							Bitvy
@@ -258,32 +257,8 @@
 						<div class="col my-auto">
 							Vítězství
 						</div>
-						<div class="col my-auto">
-							4 257 (45,50%)
-						</div>
-					</div>
-					<div class="row">
-						<div class="col my-auto">
-							Porážky
-						</div>
-						<div class="col my-auto">
-							4 990 (53,33%)
-						</div>
-					</div>
-					<div class="row">
-						<div class="col my-auto">
-							Remízy
-						</div>
-						<div class="col my-auto">
-							109 (1,17%)
-						</div>
-					</div>
-					<div class="row">
-						<div class="col my-auto">
-							Míra přežití
-						</div>
-						<div class="col my-auto">
-							1 744 (18,64%)
+						<div class="col my-auto superunikatni" style="">
+							45,50%
 						</div>
 					</div>
 					<div class="row">
@@ -292,30 +267,6 @@
 						</div>
 						<div class="col my-auto">
 						.	
-						</div>
-					</div>
-					<div class="row">
-						<div class="col my-auto">
-							Zničeno tanku
-						</div>
-						<div class="col my-auto">
-							4 053 (0,43)
-						</div>
-					</div>
-					<div class="row">
-						<div class="col my-auto">
-							Poměr zabití/smrtí
-						</div>
-						<div class="col my-auto">
-							0,53
-						</div>
-					</div>
-					<div class="row">
-						<div class="col my-auto">
-							Detekováno tanků
-						</div>
-						<div class="col my-auto">
-							7 534 (0,81)
 						</div>
 					</div>
 					<div class="row">
@@ -334,101 +285,229 @@
 							356,59
 						</div>
 					</div>
+					<div class="row">
+						<div class="col my-auto">
+							.
+						</div>
+						<div class="col my-auto">
+							.
+						</div>
+					</div>
+					<div class="row">
+						<div class="col my-auto">
+							Osobní hodnocení
+						</div>
+						<div class="col my-auto">
+							3 166
+						</div>
+					</div>
+					<div class="row">
+						<div class="col my-auto">
+						.	
+						</div>
+						<div class="col my-auto">
+						.	
+						</div>
+					</div>
+					<div class="row" style="padding: 10px 0 5px 0">
+						<div class="col my-auto">
+							WN7
+						</div>
+						<div class="col my-auto velmi-spatne" style="">
+							553,90	
+						</div>
+					</div>
+					<div class="row" style="padding: 5px 0 10px 0">
+						<div class="col my-auto">
+							WN8
+						</div>
+						<div class="col my-auto spatne" style="">
+							542,62	
+						</div>
+					</div>
+				</div>
+				
+				
+				<div class="col my-auto" style="text-align: left;">
+					<h4 style="padding-bottom: 15px;">Za 7 dnů</h4>
+					<div class="row">
+						<div class="col my-auto">
+							Bitvy
+						</div>
+						<div class="col my-auto">
+							9 356
+						</div>
+					</div>
+					<div class="row">
+						<div class="col my-auto">
+							Vítězství
+						</div>
+						<div class="col my-auto podprumerne" style="">
+							45,50%
+						</div>
+					</div>
+					<div class="row">
+						<div class="col my-auto">
+						.	
+						</div>
+						<div class="col my-auto">
+						.	
+						</div>
+					</div>
+					<div class="row">
+						<div class="col my-auto">
+							Průměrná poškození
+						</div>
+						<div class="col my-auto">
+							483,54
+						</div>
+					</div>
+					<div class="row">
+						<div class="col my-auto">
+							Průměrné zkušenosti
+						</div>
+						<div class="col my-auto">
+							356,59
+						</div>
+					</div>
+					<div class="row">
+						<div class="col my-auto">
+							.
+						</div>
+						<div class="col my-auto">
+							.
+						</div>
+					</div>
+					<div class="row">
+						<div class="col my-auto">
+							Osobní hodnocení
+						</div>
+						<div class="col my-auto">
+							3 166
+						</div>
+					</div>
+					<div class="row">
+						<div class="col my-auto">
+						.	
+						</div>
+						<div class="col my-auto">
+						.	
+						</div>
+					</div>
+					<div class="row" style="padding: 10px 0 5px 0">
+						<div class="col my-auto">
+							WN7
+						</div>
+						<div class="col my-auto prumerne" style="">
+							553,90	
+						</div>
+					</div>
+					<div class="row" style="padding: 5px 0 10px 0">
+						<div class="col my-auto">
+							WN8
+						</div>
+						<div class="col my-auto dobre" style="">
+							542,62	
+						</div>
+					</div>
+					
+					
+					
+					
+				</div>
+				<div class="col my-auto" style="text-align: left;">
+					<h4 style="padding-bottom: 15px;">Za 28 dnů</h4>
+					<div class="row">
+						<div class="col my-auto">
+							Bitvy
+						</div>
+						<div class="col my-auto">
+							9 356
+						</div>
+					</div>
+					<div class="row">
+						<div class="col my-auto">
+							Vítězství
+						</div>
+						<div class="col my-auto velmi-dobre" style="">
+							45,50%
+						</div>
+					</div>
+					<div class="row">
+						<div class="col my-auto">
+						.	
+						</div>
+						<div class="col my-auto">
+						.	
+						</div>
+					</div>
+					<div class="row">
+						<div class="col my-auto">
+							Průměrná poškození
+						</div>
+						<div class="col my-auto">
+							483,54
+						</div>
+					</div>
+					<div class="row">
+						<div class="col my-auto">
+							Průměrné zkušenosti
+						</div>
+						<div class="col my-auto">
+							356,59
+						</div>
+					</div>
+					<div class="row">
+						<div class="col my-auto">
+							.
+						</div>
+						<div class="col my-auto">
+							.
+						</div>
+					</div>
+					<div class="row">
+						<div class="col my-auto">
+							Osobní hodnocení
+						</div>
+						<div class="col my-auto">
+							3 166
+						</div>
+					</div>
+					<div class="row">
+						<div class="col my-auto">
+						.	
+						</div>
+						<div class="col my-auto">
+						.	
+						</div>
+					</div>
+					<div class="row" style="padding: 10px 0 5px 0">
+						<div class="col my-auto">
+							WN7
+						</div>
+						<div class="col my-auto vyborne" style="">
+							553,90	
+						</div>
+					</div>
+					<div class="row" style="padding: 5px 0 10px 0">
+						<div class="col my-auto" >
+							WN8
+						</div>
+						<div class="col my-auto unikatni" style="">
+							542,62	
+						</div>
+					</div>
 					
 					
 					
 					
 				</div>
 				
-				<div class="col my-auto" style="text-align: left;">
-					<h4>Průměrné skóre za bitvu</h4>
-						<div class="row">
-							<div class="col my-auto">
-								Zkušenosti
-							</div>
-							<div class="col my-auto">
-								356
-							</div>
-						</div>
-						<div class="row">
-							<div class="col my-auto">
-								.
-							</div>
-							<div class="col my-auto">
-								.
-							</div>
-						</div>
-						<div class="row">
-							<div class="col my-auto">
-								Způsobené poškození
-							</div>
-							<div class="col my-auto">
-								484
-							</div>
-						</div>
-						<div class="row">
-							<div class="col my-auto">
-								Obdržené poškození
-							</div>
-							<div class="col my-auto">
-								777
-							</div>
-						</div>
-						<div class="row">
-							<div class="col my-auto">
-								Počet ochromení
-							</div>
-							<div class="col my-auto">
-								4
-							</div>
-						</div>
-						<div class="row">
-							<div class="col my-auto">
-								Poškození způsobené s vaší asistenci
-							</div>
-							<div class="col my-auto">
-								227
-							</div>
-						</div>
-						<div class="row">
-							<div class="col my-auto">
-								Poškození na ochromení
-							</div>
-							<div class="col my-auto">
-								363
-							</div>
-						</div>
-						<div class="row">
-							<div class="col my-auto">
-								.
-							</div>
-							<div class="col my-auto">
-								.
-							</div>
-						</div>
-						<div class="row">
-							<div class="col my-auto">
-								Nepřetelských vozidel odhaleno
-							</div>
-							<div class="col my-auto">
-								0,81
-							</div>
-						</div>
-						<div class="row">
-							<div class="col my-auto">
-								Nepřateslkých vozidel zničeno
-							</div>
-							<div class="col my-auto">
-								0,43
-							</div>
-						</div>
-
-				</div>
+				
 			</div>
 		</div>
     </div>
 </section>
-	<div style="padding-bottom: 500px;"></div>
 
 
 

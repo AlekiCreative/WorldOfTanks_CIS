@@ -4,142 +4,79 @@
 <?php include "parts/sidebar.php";?>
 
 <style>
-
-.col {font-family: "Roboto Condensed", Arial, "Helvetica Neue", Helvetica, sans-serif;}
-.main-info .col span{font-size: 65px; font-weith: 700;}
-.clan-stat .col span{font-size: 30px; font-weith: 700;}
-#clan-dashboard {font-weight: bold; color:white;}
+#clan-personal {font-weight: bold; color:white;}
 </style>
 
-
-<section class="main-info" style="padding-top:  80px; color: white; margin-bottom: 10px;">
-	<div class="container">			
+<section class="personal-info" style="padding-top: 90px;  color: white; font-size: 14px;">
+	<div class="container">		
 		<div class="text-center">
 			<div class="row" style="margin-bottom: 25px;">
 			
 				<div class="col my-auto" style="">
-					<div>Aktivních hráčů</div>
-					<span>5</span>
+					<div style="font-size: 22px;">Velitel</div>
+					<span style="font-size: 35px;">alik_99</span>
 				</div>
 				
-				<div class="col">
-					<div style="font-size: 22px;">Czechoslovakia Separate Tank Brigade</div>
-					<div style="font-size: 25px; color: #800000;">[CSSTB]</div>
-					<p></p>
-					<img src="https://eu.wargaming.net/clans/media/clans/emblems/cl_145/500164145/emblem_195x195.png">
-					<p></p>
-				</div>
-				
+								
 				<div class="col my-auto">
-					<div>Celkem členu</div>
-					<span>25</span>
+					<div style="font-size: 22px;">Celkem členu</div>
+					<span style="font-size: 95px;">25</span>
 				</div>
 				
-			</div>
-			<div class="row">
-				<div class="col my-auto">
-				</div>
 				<div class="col my-auto" style="">
-					<div style=" font-size: 14px; ">Zlaťáky</div>
-					<div style=" font-size: 16px; ">0 <img src="assets/img/gold.png"></div>
+					<div style="font-size: 22px;">Zástupce</div>
+					<span style="font-size: 35px;">Phanatar</span>
 				</div>
 				
-				<div class="col">
-					<div style=" font-size: 15px; font-weith: 700; "> Průmyslové zdroje</div>
-					<div style=" font-size: 18px; font-weith: 700; "> 60 696 <img src="assets/img/source.png"></div>
+			</div>
+			
+			<div class="row" style="margin-bottom: 25px;">
+				<div class="col my-auto" style="">
+					
+				</div>
+			
+				<div class="col my-auto" style="">
+					<div>Výkonní důstojník</div>
+					<span>2</span>
 				</div>
 				
+								
 				<div class="col my-auto">
-					<div style=" font-size: 14px; ">Bony </div>
-					<div style=" font-size: 16px; ">0 <img src="assets/img/bony.png"></div>
+					<div>Bojový důstojník</div>
+					<span>1</span>
 				</div>
-				<div class="col my-auto">
+				
+				<div class="col my-auto" style="">
+					<div>Mladší důstojník</div>
+					<span>4</span>
 				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<div class="text-center">
-	<img style="position: relative; top: 45px;" src="https://www.pngkey.com/png/full/1007-10072977_world-of-tanks-opening-chest-part-close-icon.png" width="61" height="86">
-</div>
-
-<section class="clan-stat" style="padding: 60px 0 40px 0; color: white; font-size: 15px; background-color: #333;">
-	<div class="container">		
-		
-	<div class="text-center">
-	
-	
-		<div class="row">
-			<div class="col my-auto">
-				<div>Průměr bitev</div>
-				<span>8 319</span>
-			</div>
-			<div class="col my-auto">
-				<div>Průměrný poměr Vítězství/Bitev</div>
-				<span>46,93%</span>
-			</div>
-			<div class="col my-auto" style="font-size: 19px;">
-				<div>Hodnocení klanu</div>
-				<span style="font-size: 45px;">3 547</span>
-			</div>
-			<div class="col my-auto">
-				<div>Průměrné zkušenosti za bitvu</div>
-				<span>398</span>
-			</div>
-			<div class="col my-auto">
-				<div>Průměrné poškození za bitvu</div>
-				<span>622</span>
-			</div>
-			
-		</div>
-	</div>
-
-</section>
-
-<section class="poster" style="margin: 80px 0 60px 0; ">
-	<div class="container">		
-		
-	<div class="text-center">
-	
-	
-		<div class="row">
-			
-			
-			<div class="col my-auto dashboard-board-container">
-				<a href="clan-board.php" style="text-decoration : none">
-					<div style="">
-					Kto má záujem a je ochotný pridať sa na discord budeme rádi. <br><br> K založeniu a inštalácii discordu je ochotný vám pomôcť hráč j4r0,
-					</div>
-				</a>
-			</div>
-			<div class="col my-auto dashboard-board-container">
-				<a href="clan-board.php" style="text-decoration : none">
-					<div style="">
-					Kto má záujem a je ochotný pridať sa na discord budeme rádi. <br><br> K založeniu a inštalácii discordu je ochotný vám pomôcť hráč j4r0,
-					</div>
-				</a>
-			</div>
-			<div class="col my-auto dashboard-board-container" style="text-align: center;">
-				<a href="clan-board.php">
-					<div style="">
-					<br>
-					Vývěšká<br>
-					2/3<br>
-					</div>
-				</a>
+				
+				<div class="col my-auto" style="">
+					<div>Vojín</div>
+					<span>6</span>
+				</div>
+				
+				<div class="col my-auto" style="">
+					<div>Rekrut</div>
+					<span>7</span>
+				</div>
+				
+				<div class="col my-auto" style="">
+					
+				</div>
+				
+				
 			</div>
 			
 			
 		</div>
 	</div>
-
 </section>
 <section class="top-player" style="padding: 30px 0 20px 0; color: white; font-size: 15px;">
 			
 	<div class="container">				
 		<div class="text-center">
-		<div style=" font-size: 20px; font-family: 'Roboto Condensed', Arial, 'Helvetica Neue', Helvetica, sans-serif;">Nejlepší hrači CSSTB</div>
+		<div style=" font-size: 20px; font-family: 'Roboto Condensed', Arial, 'Helvetica Neue', Helvetica, sans-serif;">Nejlepší hrači CSSTB podle PR</div>
 		<p></p>
 			<div class="row">
 				
@@ -287,28 +224,84 @@
 		</div>
 	</div>
 </section>
-<section class="dashboard-event" style="margin: 80px 0 60px 0; ">
-	<div class="container">		
 
-		<div class="dashboard-event-title">
-			Klanový eventy
-		</div>
-			
-		<div class="dashboard-event-content">
-			Žadný event se nekoná
-		</div>
-			
 
+
+
+
+<section class="personal-list" style="padding-top:  40px; color: white; margin-bottom: 10px;">
+	<div class="container">			
+		<table class="table text-left" id="contract_border">
+
+            <thead>
+                <tr>
+					<th></th>
+                    <th>Hráč</th>
+					<th></th>
+					<th></th>
+                    <th>Hodnocení</th>
+                    <th>Bitev</th>
+                    <th>Vítězství</th>
+                    <th>WN8</th>
+                    <th>Hodnost</th>
+                    <th>Připojen</th>
+  
+                </tr>
+            </thead>
+ 
+			<tbody>
+				<tr>
+                    <th><img src="assets/img/velitel.png" height="30px"></th>
+                    <th>Phanatar</th>
+					<th></th>
+					<th></th>
+                    <th>4,800</th>
+                    <th>6000</th>
+                    <th><div class="prumerne">51%</div></th>
+                    <th><div class="prumerne">1024</div></th>
+                    <th>Výkonní důstojník</th>
+                    <th>1. Ledna 1989</th>
+  
+				</tr>
+				
+				<tr>
+                    <th><img src="assets/img/velitel.png" height="30px"></th>
+                    <th>Phanatar</th>
+					<th></th>
+					<th></th>
+                    <th>4,800</th>
+                    <th>6000</th>
+                    <th><div class="prumerne">51%</div></th>
+                    <th><div class="prumerne">1024</div></th>
+                    <th>Rekrut</th>
+                    <th>1. Ledna 1989</th>
+  
+				</tr>
+				
+				<tr>
+                    <th><img src="assets/img/velitel.png" height="30px"></th>
+                    <th>SVIJANY_rohlik_v_parku</th>
+					<th></th>
+					<th></th>
+                    <th>4,800</th>
+                    <th>6000</th>
+                    <th><div class="prumerne">51%</div></th>
+                    <th><div class="prumerne">1024</div></th>
+                    <th>Vojín</th>
+                    <th>1. Ledna 1989</th>
+  
+				</tr>
+				
+				
+				
+			</tbody>
+		</table>
+
+		
+	</div>
 </section>
 
 
 
 
-
-
-
-
-
 <?php include "parts/footer.php";?>
-
-

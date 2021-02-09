@@ -1,18 +1,19 @@
 <div class="menu">
             <div class="sidenav">
             <ul>
-                <li><a href="index.php" class="menu_list" id="dashboard">Dashboard</a></li>
+                <li id="dashboard"><a href="index.php" class="menu_list" id="dashboard">Dashboard</a></li>
                                
 				<div class="menu_list dropdown-btn" id="player">alik_99</div>
 				<div class="dropdown-container">
 					<ul class="">
 						<li id="player-dashboard"><a href="player-dashboard.php" class="menu_sublist" id="active"> Dashboard</a></li>
-						<li id="player-garage"><a href="#" class="menu_sublist" id="active"> Garáž</a></li>
-						<li id="player-booster"><a href="#" class="menu_sublist" id="active"> Zálohy</a></li>
-						<li id="player-booster"><a href="#" class="menu_sublist" id="active"> Úspěchy</a></li>
-						<li id="player-contact"><a href="#" class="menu_sublist" id="active"> Kontakty</a></li>
-						<li id="player-campain"><a href="#" class="menu_sublist" id="active"> Kampaň</a></li>
-						<li id="player-bans"><a href="#" class="menu_sublist" id="active"> Ban list</a></li>
+						<li id="player-garage"><a href="player-garage.php" class="menu_sublist" id="active"> Garáž</a></li>
+						<!--
+						<li id="player-booster"><a href="player-booster.php" class="menu_sublist" id="active"> Zálohy</a></li>
+						<li id="player-achievements"><a href="player-achievements.php" class="menu_sublist" id="active"> Úspěchy</a></li>
+						<li id="player-contact"><a href="player-contact.php" class="menu_sublist" id="active"> Kontakty</a></li>
+						<li id="player-campain"><a href="player-campain.php" class="menu_sublist" id="active"> Kampaň</a></li>
+						<li id="player-bans"><a href="player-bans.php" class="menu_sublist" id="active"> Ban list</a></li>-->
 					</ul>
 				</div>
 				
@@ -20,38 +21,44 @@
 				<div class="menu_list dropdown-btn" id="clan"><img src="https://eu.wargaming.net/clans/media/clans/emblems/cl_145/500164145/emblem_24x24.png" width="18px" height="18px"> Klan CSSTB</div>
 				<div class="dropdown-container">
 					<ul class="">				
-						<li><a href="clan-dashboard.php" class="menu_sublist" id="active"> Dashboard</a></li>           
-						<li><a href="#" class="menu_sublist" id="active"> Vývěšká</a></li>           
-						<li><a href="#" class="menu_sublist" id="active"> Pravidla</a></li>           
-						<li><a href="#" class="menu_sublist" id="active"> Personál</a></li>           
-						<li><a href="#" class="menu_sublist" id="active"> Eventy</a></li>
-						<li><a href="#" class="menu_sublist" id="active"> Hodnocení</a></li>
-						<li><a href="#" class="menu_sublist" id="active"> Timeline</a></li>
+						<li id="clan-dashboard"><a href="clan-dashboard.php" class="menu_sublist" id="active"> Dashboard</a></li>           
+						<li id="clan-board"><a href="clan-board.php" class="menu_sublist" id="active"> Vývěšká</a></li>           
+						<li id="clan-personal"><a href="clan-personal.php" class="menu_sublist" id="active"> Personál</a></li>  
+						<!--
+						<li id="clan-rules"><a href="clan-rules.php" class="menu_sublist" id="active"> Pravidla</a></li>           
+						<li id="clan-events"><a href="clan-events.php" class="menu_sublist" id="active"> Eventy</a></li>
+						<li id="clan-rating"><a href="clan-rating.php" class="menu_sublist" id="active"> Hodnocení</a></li>
+						-->
 					</ul>
 				</div>
 				
+				<!--
 				<div class="menu_list dropdown-btn" id="tankopedie">Tankopedie</div>
 				<div class="dropdown-container">
 					<ul class="">				
-						<li><a href="#" class="menu_sublist" id="active"> Seznam vozidel</a></li>           
-						<li><a href="#" class="menu_sublist" id="active"> Mapy</a></li>           
-						<li><a href="#" class="menu_sublist" id="active"> Posádka</a></li>           
-						<li><a href="#" class="menu_sublist" id="active"> Úspěchy</a></li>           
-						<li><a href="#" class="menu_sublist" id="active"> Osobní mise</a></li>
+						<li id="tankopedie-vehicles"><a href="tankopedie-vehicles.php" class="menu_sublist" id="active"> Seznam vozidel</a></li>           
+						<li id="tankopedie-maps"><a href="tankopedie-maps.php" class="menu_sublist" id="active"> Mapy</a></li>           
+						<li id="tankopedie-crews"><a href="tankopedie-crews.php" class="menu_sublist" id="active"> Posádka</a></li>           
+						<li id="tankopedie-achievements"><a href="tankopedie-achievements.php" class="menu_sublist" id="active"> Úspěchy</a></li>           
+						<li id="tankopedie-campain"><a href="tankopedie-campain.php" class="menu_sublist" id="active"> Osobní mise</a></li>
 					</ul>
 				</div>
+				-->
+				<!--
 				<div class="menu_list dropdown-btn" id="statistika">Statistika</div>
 				<div class="dropdown-container">
 					<ul class="">				
-						<li><a href="#" class="menu_sublist" id="active"> Dashboard</a></li>           
-						<li><a href="#" class="menu_sublist" id="active"> Osobní</a></li>           
-						<li><a href="#" class="menu_sublist" id="active"> Klanový</a></li>           
-						<li><a href="#" class="menu_sublist" id="active"> Vyhledat</a></li>                   
+						<li id="statistic-dashboard"><a href="statistic-dashboard.php" class="menu_sublist" id="active"> Dashboard</a></li>           
+						<li id="statistic-personal"><a href="statistic-personal.php" class="menu_sublist" id="active"> Osobní</a></li>           
+						<li id="statistic-clan"><a href="statistic-clan.php" class="menu_sublist" id="active"> Klanový</a></li>           
+						<li id="statistic-find"><a href="statistic-find.php" class="menu_sublist" id="active"> Vyhledat</a></li>                   
 					</ul>
 				</div>
+				-->
 				
-				<li><a href="#" class="menu_list" id="discord-managment"> Discord managment</a></li>
-				<li><a href="#" class="menu_list" id="nastaveni"> Nastavení</a></li>
+				<!--<li id="discord-managment"><a href="#" class="menu_list" > Discord managment</a></li>-->
+				<li id="setting"><a href="setting.php" class="menu_list" > Nastavení</a></li>
+				<li id="about"><a href="about.php" class="menu_list"> O Projektu</a></li>
 				
 				
             </ul>
