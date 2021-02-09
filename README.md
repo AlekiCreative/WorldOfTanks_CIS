@@ -74,15 +74,8 @@ Použivání na vlastní riziko, autor nenese žádnou odpovědnost za škody an
 ## Pracuje se na
 
 *	Grafický návrh
-<ul>	
-<li>Nastavení</li>
-<li>Osobní dashboard</li>
-<li>Statistika dashboard</li>
-</ul>
 *	Optimalizace css
 
-
->>>>>>> 3707a3950118214cab968bbc2a5dfbd7cb6b3f19
 <!-- LICENSE -->
 ## License
 
