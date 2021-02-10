@@ -54,22 +54,35 @@ Použivání na vlastní riziko, autor nenese žádnou odpovědnost za škody an
 <!-- Historie vývoje -->
 ## Historie vývoje
 <details>
-  <summary>0.1. Zahájen vývoj (2. Února 2021)</summary>
-  <li>Grafický návrh </li>
+  <summary>0.1 Zahájen vývoj (2. Února 2021)</summary>
+  <li>Základní grafický podklad </li>
   <li>Základní struktura souboru </li>
 </details>
-
+<details>
+  <summary>0.2 (3. Února 2021)</summary>
+  <li>Grafický návrh (Osobní dashboard) </li>
+  <li>Změny v sidebar (Přidani odkazy na grafické návrhy) </li>
+</details>
+<details>
+  <summary>0.3 (9. Února 2021)</summary>
+  <li>odkazy v sidebar</li>
+  <li>nehotové substránky jsou skryté</li>
+  <li>grafický návrh clan-personal, player-garage, clan-board, about, setting</li>
+  <li>dočasně skryt notifikační zvoneček v liště</li>
+  <li>přidán odkaz na WoT profil na officiálních strankách hry, v nabídce navigační listy</li>
+</details>
+ 
 <!-- Screenshoty -->
 ## Screenshoty
 
 <img src="obrázek_2021-02-02_010608.png" alt="Logo">
 
 <!-- Použitá technologie -->
-## Použitá technologie
+## Použité technologie, knihovny, frameworku
 * [Font Awesome](https://fontawesome.com)
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
-
+* [Wargaming-auth-api-php](https://github.com/viktorsgolubevs/Wargaming-auth-api-php)
 
 ## Pracuje se na
 
