@@ -15,21 +15,17 @@ if (!isset($_SESSION['authenticate'])) {
 <?php include 'config/config.php';?>
 <style>
 
-.col {font-family: "Roboto Condensed", Arial, "Helvetica Neue", Helvetica, sans-serif;}
-.main-info .col span{font-size: 40px; font-weith: 700;}
-.clan-stat .col span{font-size: 30px; font-weith: 700;}
-#player,#player-dashboard {font-weight: bold!important; color:white!important;}
-
+#dashboard {font-weight: bold; color:white;}
 </style>
 
 
-<?php include 'dashboards/personal.php';?>
 
 
+<?php 
+	include "dashboards/clan.php";
+?>
 
 
 
 
 <?php include "parts/footer.php";?>
-
-

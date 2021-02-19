@@ -8,6 +8,7 @@ _Obsah_
 	>_Použitá technologie
 	>_Historie vývoje
 	>_Pracuje se na
+	>_SESSION
 
 
 >_Popis
@@ -33,9 +34,53 @@ _Obsah_
 
 >_Pracuje se na
 
-	Grafický návrh
-		Nastavení
-		Osobní dashboard
-		Statistika dashboard
-
+	Propojení s Wargaming API
 	Optimalizace css
+
+
+>_SESSION
+	//security
+	$_SESSION['authenticate']
+
+	//index.php
+	$_SESSION['APP_ID']	
+
+	//auth.php
+	$_SESSION['access_token']
+	$_SESSION['expires_at']
+	$_SESSION['account_id']
+	$_SESSION['status']
+
+
+	//get_data.php
+	$_SESSION['last_battle_time']
+	$_SESSION['created_at']
+	$_SESSION['global_rating']
+	$_SESSION['clan_id']
+	$_SESSION['nickname']
+	
+	$_SESSION['gold']
+	$_SESSION['free_xp']
+	$_SESSION['credits']	
+	$_SESSION['premium_expires_at']
+	$_SESSION['bonds']
+	$_SESSION['battle_life_time']
+	$_SESSION['garage']
+	$_SESSION['personal_missions']
+	$_SESSION['boosters']
+
+	$_SESSION['spotted']
+	$_SESSION['battles_on_stunning_vehicles']
+	$_SESSION['avg_damage_blocked']
+	$_SESSION['direct_hits_received']
+	$_SESSION['spotted']
+	$_SESSION['spotted']
+	$_SESSION['spotted']
+	$_SESSION['spotted']
+	$_SESSION['spotted']
+	$_SESSION['spotted']
+	$_SESSION['spotted']
+	$_SESSION['spotted']
+	$_SESSION['spotted']
+	$_SESSION['spotted']
+	$_SESSION['spotted']

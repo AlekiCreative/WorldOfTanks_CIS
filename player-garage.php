@@ -1,100 +1,25 @@
+<?php
+// We need to use sessions, so you should always start sessions using the below code.
+session_start();
+// If the user is not logged in redirect to the login page...
+if (!isset($_SESSION['authenticate'])) {
+	header('Location: index.php');
+	exit;
+}
+
+?>
 
 <?php include "parts/header.php";?>
 <?php include "parts/navigation.php";?>
 <?php include "parts/sidebar.php";?>
-
+<?php include 'config/config.php';?>
 <style>
 #player-garage {font-weight: bold; color:white;}
 </style>
 
-<section class="garage-top" style="padding-top: 90px;  color: white; font-size: 14px;">
-	<div class="container">		
-		
-	<div class="text-center">
-	
-	
-		<div class="row">
-			
-			<div class="col my-auto" >
-				<div style="font-size: 18px;">2.</div>	
-				<div style="font-size: 18px;">Centurion Mk3</div>	
-				<p></p>
-				<a href="#" style="text-decoration : none">
-					<img src="http://api.worldoftanks.eu/static/2.66.0/wot/encyclopedia/vehicle/uk-GB24_Centurion_Mk3.png">
-				</a>
-				<div class="dobre" style="padding: 3px 0 3px 0; position: relative; top: -35px;">
-					<div class="row">
-						<div class="col my-auto" style="padding: 0!important;"></div>
-						<div class="col my-auto" style="font-size: 10px;  padding: 0!important;"> W/B </div>
-						<div class="col my-auto" style="font-size: 15px;  padding: 0!important;"> TB </div>
-						<div class="col my-auto" style="font-size: 10px;  padding: 0!important;"> D/B </div>
-						<div class="col my-auto" style="padding: 0!important;"></div>
-					</div>
-					<div class="row">
-						<div class="col my-auto" style="padding: 0!important;"></div>
-						<div class="col my-auto" style="font-size: 20px;  padding: 0!important;"> 41,16% </div>
-						<div class="col my-auto" style="font-size: 25px;  padding: 0!important;"> 413 </div>
-						<div class="col my-auto" style="font-size: 20px;  padding: 0!important;"> 570 </div>
-						<div class="col my-auto" style="padding: 0!important;"></div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="col my-auto">
-				<div style="font-size: 23px;">1.</div>	
-				<div style="font-size: 23px;">O-I</div>	
-				<p></p>
-				<a href="#" style="text-decoration : none">
-					<img src="http://api.worldoftanks.eu/static/2.66.0/wot/encyclopedia/vehicle/japan-J24_Mi_To_130_tons.png" width="60%" height="60%">
-				</a>
-				<div class="prumerne" style="padding: 3px 0 3px 0;position: relative; top: -35px; ">
-					<div class="row">
-						<div class="col my-auto" style="padding: 0!important;"></div>
-						<div class="col my-auto" style="font-size: 10px; padding: 0!important;">W/B</div>
-						<div class="col my-auto" style="font-size: 15px; padding: 0!important;">TB</div>
-						<div class="col my-auto" style="font-size: 10px; padding: 0!important;">D/B</div>
-						<div class="col my-auto" style="padding: 0!important;"></div>
-					</div>
-					<div class="row">
-						<div class="col my-auto" style="padding: 0!important;"></div>
-						<div class="col my-auto" style="font-size: 20px;  padding: 0!important;">51,15%</div>
-						<div class="col my-auto" style="font-size: 25px;  padding: 0!important;">739</div>
-						<div class="col my-auto" style="font-size: 20px;  padding: 0!important;">663</div>
-						<div class="col my-auto" style="padding: 0!important;"></div>
-					</div>
-				</div>
-				
-			</div>
-			
-			<div class="col my-auto">
-				<div style="font-size: 18px;">3.</div>	
-				<div style="font-size: 18px;">Centurion</div>	
-				<p></p>
-				<a href="#" style="text-decoration : none">
-					<img src="http://api.worldoftanks.eu/static/2.66.0/wot/encyclopedia/vehicle/uk-GB23_Centurion.png">
-				</a>
-				<div class="spatne" style="padding: 3px 0 3px 0; position: relative; top: -35px;">
-					<div class="row">
-						<div class="col my-auto" style="padding: 0!important;"></div>
-						<div class="col my-auto" style="font-size: 10px; padding: 0!important;"> W/B </div>
-						<div class="col my-auto" style="font-size: 15px; padding: 0!important;"> TB </div>
-						<div class="col my-auto" style="font-size: 10px; padding: 0!important;"> D/B </div>
-						<div class="col my-auto" style="padding: 0!important;"></div>
-					</div>
-					<div class="row">
-						<div class="col my-auto" style="padding: 0!important;"></div>
-						<div class="col my-auto" style="font-size: 20px;  padding: 0!important;"> 49,08% </div>
-						<div class="col my-auto" style="font-size: 25px;  padding: 0!important;"> 273 </div>
-						<div class="col my-auto" style="font-size: 20px;  padding: 0!important;"> 809 </div>
-						<div class="col my-auto" style="padding: 0!important;"></div>
-					</div>
-				</div>
-			</div>
-			
-		</div>
-	</div>
-</section>
 
+
+<?php include "parts/top-vehicle-bar.php"; ?>
 
 <section class="garage-info" style="padding-top:  20px; padding-bottom: 20px; color: white; margin-top: 20px;">
 	<div class="container">	
@@ -105,7 +30,7 @@
 						Medka
 					</div>
 					<div class="">
-						31
+						<?php echo $_SESSION['count_tier_medium'] ?>
 					</div>	
 				</div>
 				<div class="col my-auto">
@@ -113,7 +38,7 @@
 						Lehky
 					</div>
 					<div class="">
-						13
+						<?php echo $_SESSION['count_tier_light'] ?>
 					</div>	
 				</div>
 				<div class="col my-auto">
@@ -121,7 +46,15 @@
 						Težšký
 					</div>
 					<div class="">
-						28
+						<?php echo $_SESSION['count_tier_heavy'] ?>
+					</div>	
+				</div>
+				<div class="col my-auto">
+					<div class="">
+						TD
+					</div>
+					<div class="">
+						<?php echo $_SESSION['count_tier_at'] ?>
 					</div>	
 				</div>
 				<div class="col my-auto">
@@ -129,7 +62,7 @@
 						SPG
 					</div>
 					<div class="">
-						12
+						<?php echo $_SESSION['count_tier_spg'] ?>
 					</div>	
 				</div>
 				
@@ -141,7 +74,7 @@
 						Celkem tanků
 					</div>
 					<div class="" style="font-size: 55px;">
-						105
+						<?php echo count($_SESSION['GARAGE_VEHICLE_DATA']['data'][$_SESSION['account_id']]) ;?>
 					</div>
 				</div>
 				<div class="col">
@@ -182,6 +115,14 @@
 						53
 					</div>
 				</div>
+				<div class="col my-auto">
+					<div class="">
+						
+					</div>
+					<div class="">
+						
+					</div>
+				</div>
 				
 				
 
@@ -206,36 +147,33 @@
                     <th>Národ</th>
                     <th>M</th>
                     <th>Vítězství</th>
-                    <th>WN8</th>
   
                 </tr>
             </thead>
  
 			<tbody>
-				<tr>
-                    <th><img src="https://na-wotp.wgcdn.co/dcont/fb/image/tactics_ht.png" height="30px"></th>
-					<th><img src="https://eu-wotp.wgcdn.co/dcont/tankopedia_images/j24_mi_to_130_tons/j24_mi_to_130_tons_icon_resized.svg"></th>
-                    <th class="text-left">O-I</th>
-                    <th>748</th>
-                    <th>6</th>
-                    <th><img src="assets/img/japan.png" height="30px"></th>
-                    <th><img src="https://eu-wotp.wgcdn.co/static/5.81.1_3762b0/wotp_static/img/core/frontend/scss/common/components/icons/img/rank_m.png" width="26px"></th>
-                    <th><div class="prumerne" >51%</div></th>
-                    <th><div class="prumerne" >1024</div></th>
-  
-				</tr>
-				<tr>
-                    <th><img src="https://na-wotp.wgcdn.co/dcont/fb/image/tactics_mt.png" height="30px"></th>
-					<th><img src="https://eu-wotp.wgcdn.co/dcont/tankopedia_images/a36_sherman_jumbo/a36_sherman_jumbo_icon_resized.svg"></th>
-                    <th class="text-left">M4A3E2 Sherman Jumbo</th>
-                    <th>748</th>
-                    <th>6</th>
-                    <th><img src="assets/img/usa.png" height="30px"></th>
-                    <th><img src="https://eu-wotp.wgcdn.co/static/5.81.1_3762b0/wotp_static/img/core/frontend/scss/common/components/icons/img/rank_02.png" width="26px"></th>
-                    <th><div class="velmi-spatne" >38%</div></th>
-                    <th><div class="velmi-spatne" >358</div></th>
-  
-				</tr>
+				
+				<?php
+					for ($i = 0; $i <= count($_SESSION['GARAGE_VEHICLE_DATA']['data'][$_SESSION['account_id']])-1; $i++){
+					echo
+						'<tr>
+							<th><img src="assets/img/'.getClassVehicle($_SESSION['GARAGE_VEHICLE_DATA']['data'][$_SESSION['account_id']][$i]['tank_id']).'.png" height="30px"></th>
+							<th><img src="'.getVehiclesIcon($_SESSION['GARAGE_VEHICLE_DATA']['data'][$_SESSION['account_id']][$i]['tank_id']).'"></th>
+							<th class="text-left">'.getVehiclesName($_SESSION['GARAGE_VEHICLE_DATA']['data'][$_SESSION['account_id']][$i]['tank_id']).'</th>
+							<th>'.$_SESSION['GARAGE_VEHICLE_DATA']['data'][$_SESSION['account_id']][$i]['random']['battles'].'</th>
+							<th>'.getVehiclesTier($_SESSION['GARAGE_VEHICLE_DATA']['data'][$_SESSION['account_id']][$i]['tank_id']).'</th>
+							<th><img src="assets/img/'.getVehiclesNation($_SESSION['GARAGE_VEHICLE_DATA']['data'][$_SESSION['account_id']][$i]['tank_id']).'.png" height="30px"></th>
+							<th><img src="assets/img/'.$_SESSION['GARAGE_VEHICLE_DATA']['data'][$_SESSION['account_id']][$i]['mark_of_mastery'].'.png" width="26px"></th>
+							<th><div class="prumerne" >'.number_format(($_SESSION['GARAGE_VEHICLE_DATA']['data'][$_SESSION['account_id']][$i]['random']['wins']/$_SESSION['GARAGE_VEHICLE_DATA']['data'][$_SESSION['account_id']][$i]['random']['battles']*100), 2,","," ") .'%</div></th>
+		  
+						</tr>';
+				}
+				
+				
+				?>
+				
+				
+				
 				
 				
 			</tbody>
@@ -244,8 +182,6 @@
 		
 	</div>
 </section>
-
-
 
 
 <?php include "parts/footer.php";?>

@@ -1,7 +1,18 @@
+<?php
+// We need to use sessions, so you should always start sessions using the below code.
+session_start();
+// If the user is not logged in redirect to the login page...
+if (!isset($_SESSION['authenticate'])) {
+	header('Location: index.php');
+	exit;
+}
+
+?>
 
 <?php include "parts/header.php";?>
 <?php include "parts/navigation.php";?>
 <?php include "parts/sidebar.php";?>
+<?php include 'config/config.php';?>
 
 <style>
 #about {font-weight: bold; color:white;}
@@ -18,9 +29,9 @@
 				
 				World of Tanks Clan Information System je nástroj pro zjednodušení správu klanu.<br>
 				WoT CIS není vyvíjen ani financován společnosti Wargaming. Projekt je vyvíjen pod licencí GNU General Public License v3.0 viz LICENSE.<br>
-				Design je inspirován officiálním webem World of Tanks<br>
+				Design je inspirován officiálním portálem World of Tanks<br>
 				<br>
-				Použivání na vlastní riziko, autor nenese žádnou odpovědnost za škody ani za únik dat<br>
+				Použivání na vlastní riziko, autor nenese žádnou odpovědnost za vniklé škody ani za únik dat<br>
 				<br>
 			</div>
 		</div>	

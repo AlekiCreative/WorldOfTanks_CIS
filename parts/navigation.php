@@ -68,11 +68,11 @@
                   </li>
 				  -->
                   <li class="nav-item" id="username">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">alik_99</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['nickname']; ?></a>
 						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
 							<a class="dropdown-item" href="https://worldoftanks.eu/cs/community/accounts/529439356-alik_99/"><i class="fas fa-user"></i> WoT Profile</a>
 							<a class="dropdown-item" href="https://eu.wargaming.net/clans/wot/500164145/"><i class="fas fa-user"></i> WoT Clan</a>
-							<a class="dropdown-item" href="auth/logout.php"><i class="fas fa-sign-out-alt"></i> Log out</a>
+							<a class="dropdown-item" href="config/logout.php"><i class="fas fa-sign-out-alt"></i> Log out</a>
 						</div>
 				  </li>
                   

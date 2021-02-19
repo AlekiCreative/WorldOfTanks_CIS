@@ -1,8 +1,18 @@
+<?php
+// We need to use sessions, so you should always start sessions using the below code.
+session_start();
+// If the user is not logged in redirect to the login page...
+if (!isset($_SESSION['authenticate'])) {
+	header('Location: index.php');
+	exit;
+}
+
+?>
 
 <?php include "parts/header.php";?>
 <?php include "parts/navigation.php";?>
 <?php include "parts/sidebar.php";?>
-
+<?php include 'config/config.php';?>
 <style>
 
 .col {font-family: "Roboto Condensed", Arial, "Helvetica Neue", Helvetica, sans-serif;}
@@ -20,49 +30,34 @@
 			<div class="clan-board-title">Vývěška CSSTB</div>
 		</div>	
 		
-		<div class="board-container" style="">
-			<div class="board-content">
+		<?php 
+			
+			for ($i = 0; $i <= count($_SESSION['MESSAGE_BOARD']['data'][$_SESSION['clan_id']])-1; $i++){
+			
+			
+			echo '
+				<div class="board-container" style="">
+				<div class="board-content">
 				
-				<p>Kto má záujem a je ochotný pridať sa na discord budeme rádi. 
-				</p><p>
-				<br>K založeniu a inštalácii discordu je ochotný vám pomôcť hráč <i>j4r0</i>,
-				</p><p>
-				<br>Prečo discord? 
-				<br>Discord predstavuje veľký priestor k vytvoreniu neobmedzenému počtu textových (chatovacích) / hlasových kanálov a ich organizovaniu. Discord v poslednej dobe nevyužíva iba hráči ale aj jednotlivý umelci kde si píšu/rozprávajú som svojimi fanúšikmi. Tak ako aj my máme discord zorganizovaný na chat, hlasovú komunikáciu (napr. na šarvátky) a nájdete tam aj novinky o budúcej aktualizácii či bonusové kódy.
-				</p><p>
-				<br>V prípade ďalších otázok o discorde sa nebojte kontaktovať hráča <i>j4r0</i>.
-				</p><p>
-				<br>Veľa úspechu v bitvách praje vedenie klanu CSSTB.
-				</p>
+				'.$_SESSION['MESSAGE_BOARD']['data'][$_SESSION['clan_id']][$i]['message'].'
 					
-			</div>
+				</div>
 						
-			<div class="board-footer">
-					 <span class="author">_j4r0_</span>
-					 <span class="date">25.1.2021</span>
-					 <span class="archiv">Archivace: 1.4.2021</span>
+				<div class="board-footer">
+					 <span class="author">'.getNickPlayer($_SESSION['MESSAGE_BOARD']['data'][$_SESSION['clan_id']][$i]['author_id']).'</span>
+					 <span class="date">'.date("d. m. Y, H:i", $_SESSION['MESSAGE_BOARD']['data'][$_SESSION['clan_id']][$i]['created_at']).'</span>';
+					 
+ 			if($_SESSION['MESSAGE_BOARD']['data'][$_SESSION['clan_id']][$i]['updated_at'] != null){ echo '<span class="update">Aktualizováno:'.date("d. m. Y, H:i", $_SESSION['MESSAGE_BOARD']['data'][$_SESSION['clan_id']][$i]['created_at']).'</span>';}
 
-			</div>
-		</div>
-						
-		<div class="board-container" style="">
-			<div class="board-content">
+			echo
+				'</div>
+				</div>';
 				
-				<p>Klanový discord (Pravidla, Bonusové kódy, Novinky, Návody, Informace)
-				<br>-------------------------
-				<br>https://discord.gg/h9sNkTv
-				</p>
-					
-			</div>
-						
-			<div class="board-footer">
-					 <span class="author">alik_99</span>
-					 <span class="date">25.1.2021</span>
-					 <span class="archiv">Archivace: 1.4.2021</span>
-					 <span class="update">Aktualizováno: alik_99 17.12.2020</span>
-
-			</div>
-		</div>
+			};
+			
+			?>
+			
+		
 
 		
 	</div>

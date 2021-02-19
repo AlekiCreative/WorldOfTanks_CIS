@@ -1,8 +1,18 @@
+<?php
+// We need to use sessions, so you should always start sessions using the below code.
+session_start();
+// If the user is not logged in redirect to the login page...
+if (!isset($_SESSION['authenticate'])) {
+	header('Location: index.php');
+	exit;
+}
+
+?>
 
 <?php include "parts/header.php";?>
 <?php include "parts/navigation.php";?>
 <?php include "parts/sidebar.php";?>
-
+<?php include 'config/config.php';?>
 <style>
 #clan-personal {font-weight: bold; color:white;}
 </style>
@@ -14,23 +24,29 @@
 			
 				<div class="col my-auto" style="">
 					<div style="font-size: 22px;">Velitel</div>
-					<span style="font-size: 35px;">alik_99</span>
+					<span style="font-size: 35px;"><?php echo findCommander();?></span>
 				</div>
 				
 								
 				<div class="col my-auto">
 					<div style="font-size: 22px;">Celkem členu</div>
-					<span style="font-size: 95px;">25</span>
+					<span style="font-size: 95px;"><?php echo $_SESSION['CLAN_DATA']['data'][$_SESSION['clan_id']]['members_count']; ?></span>
 				</div>
-				
+				<!-- Funkce se připravuje -->
 				<div class="col my-auto" style="">
 					<div style="font-size: 22px;">Zástupce</div>
-					<span style="font-size: 35px;">Phanatar</span>
+					<span style="font-size: 35px;">null</span>
 				</div>
 				
 			</div>
-			
-			<div class="row" style="margin-bottom: 25px;">
+		</div>
+	</div>
+</section>
+<!--plánovaná funkce
+	<section class="personal-info" style="color: white; font-size: 14px; background-color: #333; padding: 25px;">
+		<div class="container" style="">	
+			<div class="text-center">
+			<div class="row" style="">
 				<div class="col my-auto" style="">
 					
 				</div>
@@ -67,11 +83,14 @@
 				
 				
 			</div>
-			
+			</div>
+		</div>
 			
 		</div>
 	</div>
 </section>
+-->
+<!-- plánovaná funkce
 <section class="top-player" style="padding: 30px 0 20px 0; color: white; font-size: 15px;">
 			
 	<div class="container">				
@@ -224,7 +243,7 @@
 		</div>
 	</div>
 </section>
-
+-->
 
 
 
@@ -241,57 +260,41 @@
 					<th></th>
                     <th>Hodnocení</th>
                     <th>Bitev</th>
-                    <th>Vítězství</th>
-                    <th>WN8</th>
+                    <!--<th>Vítězství</th> Plánovaná funkce -->
+                    <!--<th>WN8</th> Plánovaná funkce -->
                     <th>Hodnost</th>
                     <th>Připojen</th>
   
                 </tr>
             </thead>
- 
 			<tbody>
-				<tr>
-                    <th><img src="assets/img/velitel.png" height="30px"></th>
-                    <th>Phanatar</th>
+ 
+ <?php 
+	for ($i = 0; $i <= $_SESSION['CLAN_DATA']['data'][$_SESSION['clan_id']]['members_count']-1; $i++){
+		
+		echo 	'<tr>
+                    <th><img src="assets/img/'.$_SESSION['CLAN_DATA']['data'][$_SESSION['clan_id']]['members'][$i]['role_i18n'].'.png" height="30px"></th>
+                    <th>'.$_SESSION['CLAN_DATA']['data'][$_SESSION['clan_id']]['members'][$i]['account_name'].'</th>
 					<th></th>
 					<th></th>
-                    <th>4,800</th>
-                    <th>6000</th>
-                    <th><div class="prumerne">51%</div></th>
-                    <th><div class="prumerne">1024</div></th>
-                    <th>Výkonní důstojník</th>
-                    <th>1. Ledna 1989</th>
+                    <th>'.getGlobalRatingPlayer($_SESSION['CLAN_DATA']['data'][$_SESSION['clan_id']]['members'][$i]['account_id']).'</th>
+                    <th>'.getBattlesPlayer($_SESSION['CLAN_DATA']['data'][$_SESSION['clan_id']]['members'][$i]['account_id']).'</th>
+                    
+                    <th>'.$_SESSION['CLAN_DATA']['data'][$_SESSION['clan_id']]['members'][$i]['role_i18n'].'</th>
+                    <th>'.date("d. m. Y, H:i",$_SESSION['CLAN_DATA']['data'][$_SESSION['clan_id']]['members'][$i]['joined_at']).'</th>
   
-				</tr>
+				</tr>';
+		
+		
+		
+	}
+ 
+ 
+ 
+ 
+ ?>
 				
-				<tr>
-                    <th><img src="assets/img/velitel.png" height="30px"></th>
-                    <th>Phanatar</th>
-					<th></th>
-					<th></th>
-                    <th>4,800</th>
-                    <th>6000</th>
-                    <th><div class="prumerne">51%</div></th>
-                    <th><div class="prumerne">1024</div></th>
-                    <th>Rekrut</th>
-                    <th>1. Ledna 1989</th>
-  
-				</tr>
-				
-				<tr>
-                    <th><img src="assets/img/velitel.png" height="30px"></th>
-                    <th>SVIJANY_rohlik_v_parku</th>
-					<th></th>
-					<th></th>
-                    <th>4,800</th>
-                    <th>6000</th>
-                    <th><div class="prumerne">51%</div></th>
-                    <th><div class="prumerne">1024</div></th>
-                    <th>Vojín</th>
-                    <th>1. Ledna 1989</th>
-  
-				</tr>
-				
+
 				
 				
 			</tbody>

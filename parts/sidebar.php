@@ -1,9 +1,9 @@
 <div class="menu">
             <div class="sidenav">
             <ul>
-                <li id="dashboard"><a href="index.php" class="menu_list" id="dashboard">Dashboard</a></li>
+                <li id="dashboard"><a href="dashboard.php" class="menu_list" id="dashboard">Dashboard</a></li>
                                
-				<div class="menu_list dropdown-btn" id="player">alik_99</div>
+				<div class="menu_list dropdown-btn" id="player"><?php echo $_SESSION['nickname'];?></div>
 				<div class="dropdown-container">
 					<ul class="">
 						<li id="player-dashboard"><a href="player-dashboard.php" class="menu_sublist" id="active"> Dashboard</a></li>
@@ -18,7 +18,10 @@
 				</div>
 				
 				
-				<div class="menu_list dropdown-btn" id="clan"><img src="https://eu.wargaming.net/clans/media/clans/emblems/cl_145/500164145/emblem_24x24.png" width="18px" height="18px"> Klan CSSTB</div>
+				<div class="menu_list dropdown-btn" id="clan">
+					<img src="<?php echo $_SESSION['CLAN_DATA']['data'][$_SESSION['clan_id']]['emblems']['x24']['portal']; ?>" width="18px" height="18px"> 
+					Klan <?php echo $_SESSION['CLAN_DATA']['data'][$_SESSION['clan_id']]['tag']; ?>
+				</div>
 				<div class="dropdown-container">
 					<ul class="">				
 						<li id="clan-dashboard"><a href="clan-dashboard.php" class="menu_sublist" id="active"> Dashboard</a></li>           
