@@ -71,6 +71,12 @@ Použivání na vlastní riziko, autor nenese žádnou odpovědnost za škody an
   <li>dočasně skryt notifikační zvoneček v liště</li>
   <li>přidán odkaz na WoT profil na officiálních strankách hry, v nabídce navigační listy</li>
 </details>
+<details>
+  <summary>0.4 (19. Února 2021)</summary>
+  <li>napojení na WG API</li>
+  <li>přidán WN algoritmus</li>
+  <li> odstranění některé elementy z důvodu špatné podpory ze strany WG nebo velká zátěž na výkon</li>
+</details>
  
 <!-- Screenshoty -->
 ## Screenshoty
@@ -86,8 +92,10 @@ Použivání na vlastní riziko, autor nenese žádnou odpovědnost za škody an
 
 ## Pracuje se na
 
-*	Grafický návrh
+*	Optimalizace výkonu
 *	Optimalizace css
+*	Oprava WN algoritmu
+*	Napojení na vlastní databasi
 
 <!-- LICENSE -->
 ## License
@@ -115,6 +123,11 @@ Distributed under the GNU General Public License v3.0. See `LICENSE` for more in
   <a href="https://twitter.com/AleschP">
     <img src="https://www.shareicon.net/data/2016/01/05/698545_network_512x512.png" alt="Logo" width="50px" height="50px">
   </a>
+  
+  <a href="https://discord.gg/BvTg85GAUh">
+    <img src="https://img.icons8.com/ios/452/discord-logo.png" alt="Logo" width="55px" height="55px">
+  </a>
+  
   
   <a href="#autor">
     <img src="http://www.alespavlik.cz/blank-field.png" alt="Logo">
