@@ -124,7 +124,7 @@ Distributed under the GNU General Public License v3.0. See `LICENSE` for more in
     <img src="https://www.shareicon.net/data/2016/01/05/698545_network_512x512.png" alt="Logo" width="50px" height="50px">
   </a>
   
-  <a href="https://discord.gg/BvTg85GAUh">
+  <a href="https://discord.gg/DyBfwRkRWa">
     <img src="https://img.icons8.com/ios/452/discord-logo.png" alt="Logo" width="55px" height="55px">
   </a>
   
