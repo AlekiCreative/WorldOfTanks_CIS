@@ -1,3 +1,4 @@
+<?php include "config/get_data_private.php";?>
 
 <section class="main-info" style="padding-top:  80px; color: white; margin-bottom: 10px;">
 	<div class="container">			
@@ -5,60 +6,28 @@
 			<div class="row" style="margin-bottom: 25px;">
 			
 				<div class="col my-auto" style="">
-					<div>WN7</div>
-					<span class="<?php echo barvicka_wn7(number_format(wn7(6.43,$_SESSION['damage_per_battle'],$_SESSION['spotted']/$_SESSION['battles'],$_SESSION['avg_def'],$_SESSION['percent_win'],$_SESSION['battles'],$_SESSION['avg_def']),0, ".",""));?>">
 					
-						<?php echo number_format(wn7(6.43,$_SESSION['damage_per_battle'],$_SESSION['spotted']/$_SESSION['battles'],$_SESSION['avg_def'],$_SESSION['percent_win'],$_SESSION['battles'],$_SESSION['avg_def']), 2,","," ");?>
-					
-					</span>
 				</div>
 				
 				<div class="col">
-					<img src="<?php echo $_SESSION['CLAN_DATA']['data'][$_SESSION['clan_id']]['emblems']['x195']['portal']; ?>" width="100px" height="100px">
-					<div style="font-size: 23px; color: #800000;">[<?php echo $_SESSION['CLAN_DATA']['data'][$_SESSION['clan_id']]['tag']; ?>]</div>
+					<img src="<?php echo $CLAN_DATA_EMBLEM["x64"]["portal"]; ?>" width="100px" height="100px">
+					<div style="font-size: 23px; color: <?php echo $CLAN_DATA[16]; ?>;">[<?php echo $CLAN_DATA[15]; ?>]</div>
 					<p></p>
-					<div style="font-size: 34px;"> <?php echo $_SESSION['nickname']; ?></div>
-					<div style="font-size: 12px;">Učet založen: <?php echo date("d. m. Y, H:i", $_SESSION['created_at']); ?>h</div>
+					<div style="font-size: 34px;"> <?php echo $ACCOUNT_DATA[3]; ?><span style="font-size: 20px; color: gray;">#<?php echo $ACCOUNT_DATA[1]; ?></span></div>
+					<div style="font-size: 12px;">Učet založen: <?php echo date("d. m. Y, H:i", intval($ACCOUNT_DATA[13])); ?>h</div>
 					
 					<p></p>
 				</div>
 				
 				<div class="col my-auto">
-					<div>WN8</div>
-					<span class="<?php echo barvicka_wn8(number_format(wn8($_SESSION['damage_per_battle'],$_SESSION['avg_damage_assisted'],$_SESSION['avg_frags'],$_SESSION['avg_def'],$_SESSION['percent_win'])),0, ".","");?>">
-						<?php echo number_format(wn8($_SESSION['damage_per_battle'],$_SESSION['avg_damage_assisted'],$_SESSION['avg_frags'],$_SESSION['avg_def'],$_SESSION['percent_win']), 2,","," "); ?>
-					</span>
+					
 				</div>
 				
 			</div>
-			<div class="row">
-				<div class="col my-auto">
-				</div>
-				<div class="col my-auto">
-					<div style=" font-size: 14px; ">Dny Premium </div>
-					<div style=" font-size: 16px; ">0 <img src="assets/img/premium.png" width="15px" height="13px"></div>
-				</div>
-				<div class="col my-auto" style="">
-					<div style=" font-size: 14px; ">Zlaťáky</div>
-					<div style=" font-size: 16px; "><?php echo number_format($_SESSION['gold'], 0,"" ," "); ?> <img src="assets/img/gold.png" width="13" height="11"></div>
-				</div>
-				
-				<div class="col">
-					<div style=" font-size: 15px; font-weith: 700; "> Kredity</div>
-					<div style=" font-size: 18px; font-weith: 700; "> <?php echo number_format($_SESSION['credits'], 0,"" ," "); ?> <img src="assets/img/credit.png" width="13" height="11"></div>
-				</div>
-				
-				<div class="col my-auto">
-					<div style=" font-size: 14px; ">Bony </div>
-					<div style=" font-size: 16px; "><?php echo number_format($_SESSION['bonds'], 0,"" ," "); ?> <img src="assets/img/bony.png" width="13" height="11"></div>
-				</div>
-				<div class="col my-auto">
-					<div style=" font-size: 14px; ">Volný XP </div>
-					<div style=" font-size: 16px; "><?php echo number_format($_SESSION['free_xp'], 0,"" ," "); ?><img src="assets/img/xp.png" width="15" height="13"></div>
-				</div>
-				<div class="col my-auto">
-				</div>
-			</div>
+			<?php if($validity_token){
+				include "parts/private/economic-row.php"; 
+			} ?>			
+
 		</div>
 	</div>
 </section>
@@ -76,24 +45,25 @@
 		<div class="row">
 			<div class="col my-auto">
 				<div>Celkem bitev</div>
-				<span><?php echo number_format($_SESSION['battles'], 0,"" ," "); ?></span>
+				<span><?php echo number_format($ACCOUNT_RANDOM["battles"], 0,"" ," "); ?></span>
 			</div>
 			<div class="col my-auto">
 				<div>Ø poškození</div>
-				<span><?php echo number_format($_SESSION['damage_per_battle'], 2,","," "); ?></span>
+				<span><?php echo number_format($ACCOUNT_RANDOM['damage_dealt']/$ACCOUNT_RANDOM['battles'], 2,","," "); ?></span>
 			</div>
 			<div class="col my-auto" style="font-size: 19px;">
 				<div>Osobní hodnocení</div>
-				<span style="font-size: 45px;"><?php echo number_format($_SESSION['global_rating'], 0,"" ," "); ?></span>
+				<span style="font-size: 45px;"><?php echo number_format($ACCOUNT_DATA[8], 0,"" ," "); ?></span>
 			</div>
 			<div class="col my-auto">
 				<div>Ø zkušenosti za bitvu</div>
-				<span><?php echo $_SESSION['battle_avg_xp']; ?></span>
+				<span><?php echo $ACCOUNT_RANDOM['battle_avg_xp']; ?></span>
 			</div>
 			<div class="col my-auto">
 				<div>Vítězství</div>
-				<span><?php echo number_format($_SESSION['percent_win'], 2,","," "); ?>%</span>
+				<span><?php echo number_format($ACCOUNT_RANDOM['winrate'], 2,","," "); ?>%</span>
 			</div>
+			
 			
 		</div>
 	</div>
@@ -120,15 +90,16 @@
 				
 				
 				<?php
-				$keys = array_keys($_SESSION['ACHIEVEMENTS_DATA']['data'][$_SESSION['account_id']]['achievements']);
-				
+				//$keys = array_keys($_SESSION['ACHIEVEMENTS_DATA']['data'][$_SESSION['account_id']]['achievements']);
+				$ARR_KEY_ARCHIEVEMENTS = array_keys($ACCOUNT_ARCHIEVEMENTS);
+
 				$a = 6;
 				for ($i = 0; $i <= $a; $i++){
 					
-					if (getArchievementsImage($keys[$i]) != null){
+					if ($ACCOUNT_ARCHIEVEMENTS[$ARR_KEY_ARCHIEVEMENTS[$i]]["image"] != null){
 						echo "
 						<div class='col my-auto'>
-							<img src=".getArchievementsImage($keys[$i]).">
+							<img src=".$ACCOUNT_ARCHIEVEMENTS[$ARR_KEY_ARCHIEVEMENTS[$i]]["image"].">
 						</div>";
 					} else {
 						$a++;
@@ -154,15 +125,15 @@
 							Bitvy
 						</div>
 						<div class="col my-auto">
-							<?php echo number_format($_SESSION['battles'], 0,"" ," "); ?>
+							<?php echo number_format($ACCOUNT_RANDOM['battles'], 0,"" ," "); ?>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col my-auto">
 							Vítězství
 						</div>
-						<div class="col my-auto <?php echo barvicka_percent($_SESSION['percent_win']);?>" style="">
-							<?php echo number_format($_SESSION['percent_win'], 2,","," "); ?>%
+						<div class="col my-auto <?php echo barvicka_percent($ACCOUNT_RANDOM['winrate']);?>" style="">
+							<?php echo number_format($ACCOUNT_RANDOM['winrate'], 2,","," "); ?>%
 						</div>
 					</div>
 					<div class="row">
@@ -178,7 +149,7 @@
 							Průměrná poškození
 						</div>
 						<div class="col my-auto">
-							<?php echo number_format($_SESSION['damage_per_battle'], 2,","," "); ?>
+							<?php echo number_format($ACCOUNT_RANDOM['avgDmg'], 2,","," "); ?>
 						</div>
 					</div>
 					<div class="row">
@@ -186,7 +157,7 @@
 							Průměrné zkušenosti
 						</div>
 						<div class="col my-auto">
-							<?php echo $_SESSION['battle_avg_xp']; ?>
+							<?php echo $ACCOUNT_RANDOM['battle_avg_xp']; ?>
 						</div>
 					</div>
 					<div class="row">
@@ -202,7 +173,7 @@
 							Osobní hodnocení
 						</div>
 						<div class="col my-auto">
-							<?php echo number_format($_SESSION['global_rating'], 0,"" ," "); ?>
+							<?php echo number_format($ACCOUNT_DATA[8], 0,"" ," "); ?>
 						</div>
 					</div>
 					<div class="row">
@@ -213,20 +184,22 @@
 						.	
 						</div>
 					</div>
+					<!--
 					<div class="row" style="padding: 10px 0 5px 0">
 						<div class="col my-auto">
 							WN7
 						</div>
-						<div class="col my-auto <?php echo barvicka_wn7(number_format(wn7(6.43,$_SESSION['damage_per_battle'],$_SESSION['spotted']/$_SESSION['battles'],$_SESSION['avg_def'],$_SESSION['percent_win'],$_SESSION['battles'],$_SESSION['avg_def']),0, ".",""));?>" style="">
-							<?php echo number_format(wn7(6.43,$_SESSION['damage_per_battle'],$_SESSION['spotted']/$_SESSION['battles'],$_SESSION['avg_def'],$_SESSION['percent_win'],$_SESSION['battles'],$_SESSION['avg_def']), 2,","," ");?>	
+						<div class="col my-auto" style="">
+							0	
 						</div>
 					</div>
+					-->
 					<div class="row" style="padding: 5px 0 10px 0">
 						<div class="col my-auto">
 							WN8
 						</div>
-						<div class="col my-auto <?php echo barvicka_wn8(number_format(wn8($_SESSION['damage_per_battle'],$_SESSION['avg_damage_assisted'],$_SESSION['avg_frags'],$_SESSION['avg_def'],$_SESSION['percent_win'])),0, ".","");?>" style="">
-							<?php echo number_format(wn8($_SESSION['damage_per_battle'],$_SESSION['avg_damage_assisted'],$_SESSION['avg_frags'],$_SESSION['avg_def'],$_SESSION['percent_win']), 2,","," "); ?>
+						<div class="col my-auto <?php echo barvicka_wn8(number_format($ACCOUNT_RANDOM['WN8']),0, ".","");?>" style="">
+							<?php echo number_format($ACCOUNT_RANDOM['WN8'], 2,","," "); ?>
 						</div>
 					</div>
 				</div>

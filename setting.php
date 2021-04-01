@@ -7,13 +7,10 @@ if (!isset($_SESSION['authenticate'])) {
 	exit;
 }
 
+include "parts/header.php";
 ?>
 
 
-<?php include "parts/header.php";?>
-<?php include "parts/navigation.php";?>
-<?php include "parts/sidebar.php";?>
-<?php include 'config/config.php';?>
 <style>
 #setting {font-weight: bold; color:white;}
 </style>

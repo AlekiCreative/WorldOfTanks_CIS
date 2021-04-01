@@ -3,7 +3,7 @@
             <ul>
                 <li id="dashboard"><a href="dashboard.php" class="menu_list" id="dashboard">Dashboard</a></li>
                                
-				<div class="menu_list dropdown-btn" id="player"><?php echo $_SESSION['nickname'];?></div>
+				<div class="menu_list dropdown-btn" id="player"><?php echo $ACCOUNT_DATA[3];?></div>
 				<div class="dropdown-container">
 					<ul class="">
 						<li id="player-dashboard"><a href="player-dashboard.php" class="menu_sublist" id="active"> Dashboard</a></li>
@@ -19,13 +19,13 @@
 				
 				
 				<div class="menu_list dropdown-btn" id="clan">
-					<img src="<?php echo $_SESSION['CLAN_DATA']['data'][$_SESSION['clan_id']]['emblems']['x24']['portal']; ?>" width="18px" height="18px"> 
-					Klan <?php echo $_SESSION['CLAN_DATA']['data'][$_SESSION['clan_id']]['tag']; ?>
+					<img src="<?php echo $CLAN_DATA_EMBLEM["x32"]["portal"]; ?>" width="18px" height="18px"> 
+					Klan <?php echo $CLAN_DATA[15]; ?>
 				</div>
 				<div class="dropdown-container">
 					<ul class="">				
 						<li id="clan-dashboard"><a href="clan-dashboard.php" class="menu_sublist" id="active"> Dashboard</a></li>           
-						<li id="clan-board"><a href="clan-board.php" class="menu_sublist" id="active"> Vývěšká</a></li>           
+						<?php if($validity_token){echo '<li id="clan-board"><a href="clan-board.php" class="menu_sublist" id="active"> Vývěšká</a></li>';} ?>           
 						<li id="clan-personal"><a href="clan-personal.php" class="menu_sublist" id="active"> Personál</a></li>  
 						<!--
 						<li id="clan-rules"><a href="clan-rules.php" class="menu_sublist" id="active"> Pravidla</a></li>           

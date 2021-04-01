@@ -9,17 +9,70 @@ if (!isset($_SESSION['authenticate'])) {
 
 ?>
 
-<?php include "parts/header.php";?>
-<?php include "parts/navigation.php";?>
-<?php include "parts/sidebar.php";?>
-<?php include 'config/config.php';?>
+
+<?php 
+
+include "parts/header.php";
+include "parts/top-vehicle-bar.php";
+
+$lightTank = 0;
+$SPG = 0;
+$heavyTank = 0;
+$AT = 0;
+$mediumTank = 0;
+
+for ($i = 0; $i < count($ACCOUNT_VEHICLE); $i++){
+
+	if ($ACCOUNT_VEHICLE[$i]["type"] == "lightTank"){
+		$lightTank++;
+	}
+	elseif ($ACCOUNT_VEHICLE[$i]["type"] == "SPG"){
+		$SPG++;
+	}
+	elseif ($ACCOUNT_VEHICLE[$i]["type"] == "heavyTank"){
+		$heavyTank++;
+	}
+	elseif ($ACCOUNT_VEHICLE[$i]["type"] == "AT-SPG"){
+		$AT++;
+	}
+	elseif ($ACCOUNT_VEHICLE[$i]["type"] == "mediumTank"){
+		$mediumTank++;
+	}
+}
+
+$master = 0;
+$one = 0;
+$two = 0;
+$three = 0;
+$none = 0;
+
+for ($i = 0; $i < count($ACCOUNT_VEHICLE); $i++){
+
+	if ($ACCOUNT_VEHICLE[$i]["mark_of_mastery"] == 4){
+		$master++;
+	}
+	elseif ($ACCOUNT_VEHICLE[$i]["mark_of_mastery"] == 3){
+		$one++;
+	}
+	elseif ($ACCOUNT_VEHICLE[$i]["mark_of_mastery"] == 2){
+		$two++;
+	}
+	elseif ($ACCOUNT_VEHICLE[$i]["mark_of_mastery"] == 1){
+		$three++;
+	}
+	elseif ($ACCOUNT_VEHICLE[$i]["mark_of_mastery"] == 0){
+		$none++;
+	}
+}
+
+
+?>
+
 <style>
-#player-garage {font-weight: bold; color:white;}
+#player-garage a{font-weight: bold; color:white;}
 </style>
 
 
-
-<?php include "parts/top-vehicle-bar.php"; ?>
 
 <section class="garage-info" style="padding-top:  20px; padding-bottom: 20px; color: white; margin-top: 20px;">
 	<div class="container">	
@@ -30,7 +83,7 @@ if (!isset($_SESSION['authenticate'])) {
 						Medka
 					</div>
 					<div class="">
-						<?php echo $_SESSION['count_tier_medium'] ?>
+						<?php echo $mediumTank; ?>
 					</div>	
 				</div>
 				<div class="col my-auto">
@@ -38,7 +91,7 @@ if (!isset($_SESSION['authenticate'])) {
 						Lehky
 					</div>
 					<div class="">
-						<?php echo $_SESSION['count_tier_light'] ?>
+						<?php echo $lightTank; ?>
 					</div>	
 				</div>
 				<div class="col my-auto">
@@ -46,7 +99,7 @@ if (!isset($_SESSION['authenticate'])) {
 						Težšký
 					</div>
 					<div class="">
-						<?php echo $_SESSION['count_tier_heavy'] ?>
+						<?php echo $heavyTank; ?>
 					</div>	
 				</div>
 				<div class="col my-auto">
@@ -54,7 +107,7 @@ if (!isset($_SESSION['authenticate'])) {
 						TD
 					</div>
 					<div class="">
-						<?php echo $_SESSION['count_tier_at'] ?>
+						<?php echo $AT; ?>
 					</div>	
 				</div>
 				<div class="col my-auto">
@@ -62,7 +115,7 @@ if (!isset($_SESSION['authenticate'])) {
 						SPG
 					</div>
 					<div class="">
-						<?php echo $_SESSION['count_tier_spg'] ?>
+						<?php echo $SPG; ?>
 					</div>	
 				</div>
 				
@@ -74,7 +127,7 @@ if (!isset($_SESSION['authenticate'])) {
 						Celkem tanků
 					</div>
 					<div class="" style="font-size: 55px;">
-						<?php echo count($_SESSION['GARAGE_VEHICLE_DATA']['data'][$_SESSION['account_id']]) ;?>
+						<?php echo count($ACCOUNT_VEHICLE) ;?>
 					</div>
 				</div>
 				<div class="col">
@@ -85,7 +138,7 @@ if (!isset($_SESSION['authenticate'])) {
 						Mko
 					</div>
 					<div class="">
-						5
+					<?php echo $master; ?>
 					</div>
 				</div>
 
@@ -94,7 +147,7 @@ if (!isset($_SESSION['authenticate'])) {
 						1st
 					</div>
 					<div class="">
-						5
+						<?php echo $one; ?>
 					</div>
 				</div>
 				
@@ -103,7 +156,7 @@ if (!isset($_SESSION['authenticate'])) {
 						2nd
 					</div>
 					<div class="">
-						15
+						<?php echo $two; ?>
 					</div>
 				</div>
 				
@@ -112,7 +165,7 @@ if (!isset($_SESSION['authenticate'])) {
 						3rd
 					</div>
 					<div class="">
-						53
+						<?php echo $three; ?>
 					</div>
 				</div>
 				<div class="col my-auto">
@@ -154,17 +207,17 @@ if (!isset($_SESSION['authenticate'])) {
 			<tbody>
 				
 				<?php
-					for ($i = 0; $i <= count($_SESSION['GARAGE_VEHICLE_DATA']['data'][$_SESSION['account_id']])-1; $i++){
+					for ($i = 0; $i < count($ACCOUNT_VEHICLE); $i++){
 					echo
 						'<tr>
-							<th><img src="assets/img/'.getClassVehicle($_SESSION['GARAGE_VEHICLE_DATA']['data'][$_SESSION['account_id']][$i]['tank_id']).'.png" height="30px"></th>
-							<th><img src="'.getVehiclesIcon($_SESSION['GARAGE_VEHICLE_DATA']['data'][$_SESSION['account_id']][$i]['tank_id']).'"></th>
-							<th class="text-left">'.getVehiclesName($_SESSION['GARAGE_VEHICLE_DATA']['data'][$_SESSION['account_id']][$i]['tank_id']).'</th>
-							<th>'.$_SESSION['GARAGE_VEHICLE_DATA']['data'][$_SESSION['account_id']][$i]['random']['battles'].'</th>
-							<th>'.getVehiclesTier($_SESSION['GARAGE_VEHICLE_DATA']['data'][$_SESSION['account_id']][$i]['tank_id']).'</th>
-							<th><img src="assets/img/'.getVehiclesNation($_SESSION['GARAGE_VEHICLE_DATA']['data'][$_SESSION['account_id']][$i]['tank_id']).'.png" height="30px"></th>
-							<th><img src="assets/img/'.$_SESSION['GARAGE_VEHICLE_DATA']['data'][$_SESSION['account_id']][$i]['mark_of_mastery'].'.png" width="26px"></th>
-							<th><div class="prumerne" >'.number_format(($_SESSION['GARAGE_VEHICLE_DATA']['data'][$_SESSION['account_id']][$i]['random']['wins']/$_SESSION['GARAGE_VEHICLE_DATA']['data'][$_SESSION['account_id']][$i]['random']['battles']*100), 2,","," ") .'%</div></th>
+							<th><img src="assets/img/'.$ACCOUNT_VEHICLE[$i]['type'].'.png" height="30px"></th>
+							<th><img src="'.$ACCOUNT_VEHICLE[$i]['icon'].'"></th>
+							<th class="text-left">'.$ACCOUNT_VEHICLE[$i]['vehicle_name'].'</th>
+							<th>'.$ACCOUNT_VEHICLE[$i]['random']['battles'].'</th>
+							<th>'.$ACCOUNT_VEHICLE[$i]['tier'].'</th>
+							<th><img src="assets/img/'.$ACCOUNT_VEHICLE[$i]['nation'].'.png" height="30px"></th>
+							<th><img src="assets/img/'.$ACCOUNT_VEHICLE[$i]['mark_of_mastery'].'.png" width="26px"></th>
+							<th><div class="prumerne" >'.number_format($ACCOUNT_VEHICLE[$i]['random']['winrate'], 2,","," ") .'%</div></th>
 		  
 						</tr>';
 				}

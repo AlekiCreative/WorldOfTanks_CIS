@@ -31,6 +31,28 @@ _Obsah_
 	0.1. Zahájen vývoj (2. Února 2021)
 		｜ Grafický návrh (Navigační a sidebar, klanový dashboard)
 		｜ Základní struktura souboru
+	0.2 (3. Února 2021)
+		| Grafický návrh (Osobní dashboard)
+		| Změny v sidebar (Přidani odkazy na grafické návrhy)
+	0.3 (9. Února 2021)
+		| Odkazy v sidebar
+		| Nehotové substránky jsou skryté
+		| Grafický návrh clan-personal, player-garage, clan-board, about, setting
+		| Dočasně skryt notifikační zvoneček v liště
+		| Přidán odkaz na WoT profil na officiálních strankách hry, v nabídce navigační listy
+	0.4 (19. Února 2021)
+		| Napojení na WG API
+		| Přidán WN algoritmus
+		| Odstranění některé elementy z důvodu špatné podpory ze strany WG nebo velká zátěž na výkon
+	0.4.1 (1. Dubna 2021) 
+		| Odstraněn kód pro plánovánou sekci TOP Player (plán zrušen) (clan.php)
+		| Odstraněn kód pro řádek ekonomické situace klanu (clan.php)
+		| Propojení s DB (db_controller.php)
+		| Přidan ID účtu vedle jména
+		| Změna názvu ikon klanových rolí z čestina na angličtinu
+		| Oprava zvýraznění aktivní stranky v sidebar
+		| Odstraněn WN algoritmus 
+
 
 >_Pracuje se na
 
@@ -52,35 +74,5 @@ _Obsah_
 	$_SESSION['status']
 
 
-	//get_data.php
-	$_SESSION['last_battle_time']
-	$_SESSION['created_at']
-	$_SESSION['global_rating']
-	$_SESSION['clan_id']
-	$_SESSION['nickname']
 	
-	$_SESSION['gold']
-	$_SESSION['free_xp']
-	$_SESSION['credits']	
-	$_SESSION['premium_expires_at']
-	$_SESSION['bonds']
-	$_SESSION['battle_life_time']
-	$_SESSION['garage']
-	$_SESSION['personal_missions']
-	$_SESSION['boosters']
-
-	$_SESSION['spotted']
-	$_SESSION['battles_on_stunning_vehicles']
-	$_SESSION['avg_damage_blocked']
-	$_SESSION['direct_hits_received']
-	$_SESSION['spotted']
-	$_SESSION['spotted']
-	$_SESSION['spotted']
-	$_SESSION['spotted']
-	$_SESSION['spotted']
-	$_SESSION['spotted']
-	$_SESSION['spotted']
-	$_SESSION['spotted']
-	$_SESSION['spotted']
-	$_SESSION['spotted']
-	$_SESSION['spotted']
+	

@@ -77,6 +77,16 @@ Použivání na vlastní riziko, autor nenese žádnou odpovědnost za škody an
   <li>přidán WN algoritmus</li>
   <li> odstranění některé elementy z důvodu špatné podpory ze strany WG nebo velká zátěž na výkon</li>
 </details>
+<details>
+  <summary>0.4.1 (1. Dubna 2021)</summary>
+  <li>Odstraněn kód pro plánovánou sekci TOP Player (plán zrušen) (clan.php)</li>
+  <li>Odstraněn kód pro řádek ekonomické situace klanu (clan.php)</li>
+  <li>Propojení s DB (db_controller.php)</li>
+  <li>Přidan ID účtu vedle jména</li>
+  <li>Změna názvu ikon klanových rolí z čestina na angličtinu</li>
+  <li>Oprava zvýraznění aktivní stranky v sidebar</li>
+  <li>Odstraněn WN algoritmus</li>
+</details>
  
 <!-- Screenshoty -->
 ## Screenshoty

@@ -1,3 +1,6 @@
+<?php include 'config/config.php';?>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,3 +18,7 @@
 
     </head>
 	<body>
+
+    <?php include "parts/navigation.php";?>
+    <?php include "parts/sidebar.php";?>
+    <?php include "parts/notice.php"?>

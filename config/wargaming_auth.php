@@ -25,7 +25,7 @@ class WargamingAuth {
 
     private static $redirect_url = 'http://localhost/ManagmentSystem/WorldOfTanks_CIS/config/auth.php';
 
-    private static $expires = 86400; // 60*60*24*1 = 86400 - one day
+    private static $expires = 1209600; // 60*60*24*1 = 86400 - one day
 
     private function redirect($url)
     {

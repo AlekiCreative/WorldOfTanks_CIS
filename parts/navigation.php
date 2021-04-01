@@ -42,36 +42,13 @@
                   <li class="nav-item" id="date">
                     <a class="nav-link" href="#"><?php echo(date("d. ") . date("F ") . date("Y"));?></a>
                   </li>
-				  
-				  <!-- Notification Bell 
-				  
-                  <li class="nav-item" id="notification">
-					<li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="far fa-bell"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right notifications" aria-labelledby="navbarDropdownMenuLink" style="right: 0;">
-						<div class="notification-item warnig" style="display: flex;">
-						Omlouváme se, ale některé funkce mohou být z technických důvodu nedostupné
-						</div>
-						<div class="notification-item danger" style="display: flex;">
-						Omlouváme se, ale některé funkce 
-						</div>
-						<div class="notification-item successfully" style="display: flex;">
-						Best
-						</div>
-						
-						
-                    </div>
-                  </li>
 
-                  </li>
-				  -->
-                  <li class="nav-item" id="username">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['nickname']; ?></a>
+            <li class="nav-item" id="username">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $ACCOUNT_DATA[3]; ?></a>
 						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="https://worldoftanks.eu/cs/community/accounts/529439356-alik_99/"><i class="fas fa-user"></i> WoT Profile</a>
-							<a class="dropdown-item" href="https://eu.wargaming.net/clans/wot/500164145/"><i class="fas fa-user"></i> WoT Clan</a>
+              <a class="dropdown-item" href="index.php">Index Page</a>
+							<a class="dropdown-item" href="https://worldoftanks.eu/cs/community/accounts/<?php echo $ACCOUNT_DATA[1]; ?>-<?php echo $ACCOUNT_DATA[3]; ?>/" target="_blank"><i class="fas fa-user"></i> WoT Profile</a>
+							<a class="dropdown-item" href="https://eu.wargaming.net/clans/wot/<?php echo $CLAN_DATA[1]?>/" target="_blank"><i class="fas fa-users"></i> WoT Clan</a>
 							<a class="dropdown-item" href="config/logout.php"><i class="fas fa-sign-out-alt"></i> Log out</a>
 						</div>
 				  </li>
@@ -81,5 +58,9 @@
                 </ul>
               </div>
             </nav>
-        </div>
+            </div>
+            
+    
+            
+   
         <!-- Konec Navigační lišty -->

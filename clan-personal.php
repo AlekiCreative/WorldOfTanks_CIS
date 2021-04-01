@@ -10,11 +10,9 @@ if (!isset($_SESSION['authenticate'])) {
 ?>
 
 <?php include "parts/header.php";?>
-<?php include "parts/navigation.php";?>
-<?php include "parts/sidebar.php";?>
-<?php include 'config/config.php';?>
+
 <style>
-#clan-personal {font-weight: bold; color:white;}
+#clan-personal a{font-weight: bold; color:white;}
 </style>
 
 <section class="personal-info" style="padding-top: 90px;  color: white; font-size: 14px;">
@@ -24,13 +22,13 @@ if (!isset($_SESSION['authenticate'])) {
 			
 				<div class="col my-auto" style="">
 					<div style="font-size: 22px;">Velitel</div>
-					<span style="font-size: 35px;"><?php echo findCommander();?></span>
+					<span style="font-size: 35px;"><?php echo $CLAN_DATA[6];?></span>
 				</div>
 				
 								
 				<div class="col my-auto">
 					<div style="font-size: 22px;">Celkem členu</div>
-					<span style="font-size: 95px;"><?php echo $_SESSION['CLAN_DATA']['data'][$_SESSION['clan_id']]['members_count']; ?></span>
+					<span style="font-size: 95px;"><?php echo $CLAN_DATA[8]; ?></span>
 				</div>
 				<!-- Funkce se připravuje -->
 				<div class="col my-auto" style="">
@@ -42,7 +40,7 @@ if (!isset($_SESSION['authenticate'])) {
 		</div>
 	</div>
 </section>
-<!--plánovaná funkce
+<!--plánovaná funkce Počítatlo hráču ve hodnostích
 	<section class="personal-info" style="color: white; font-size: 14px; background-color: #333; padding: 25px;">
 		<div class="container" style="">	
 			<div class="text-center">
@@ -90,160 +88,7 @@ if (!isset($_SESSION['authenticate'])) {
 	</div>
 </section>
 -->
-<!-- plánovaná funkce
-<section class="top-player" style="padding: 30px 0 20px 0; color: white; font-size: 15px;">
-			
-	<div class="container">				
-		<div class="text-center">
-		<div style=" font-size: 20px; font-family: 'Roboto Condensed', Arial, 'Helvetica Neue', Helvetica, sans-serif;">Nejlepší hrači CSSTB podle PR</div>
-		<p></p>
-			<div class="row">
-				
-				
-				
-				<div class="col my-auto" style="color: #aaaaab">
-					<div class="" style="">
-						<div style="font-size: 15px;">2.</div>
-						<div style="font-size: 20px;">
-						Phanatar
-						</div>
-						<p></p>
-						<i class="fas fa-user-alt" style="font-size:62px; color: rgba(255,255,255,0.4)"></i>
-						
-						<div class="top-player-banner" style="font-size: 14px;">
-							<div class="row">
-								<div class="col my-auto" style="">
-								</div>
-								<div class="col my-auto" style="">
-									<i class="fas fa-flag"></i>
-								</div>
-								<div class="col my-auto" style="">
-									<i class="fas fa-star"></i>
-								</div>
-								<div class="col my-auto" style="">
-									<i class="fas fa-play"></i>
-								</div>
-								<div class="col my-auto" style="">
-								</div>
-							</div>
-							<div class="row">
-								
-								<div class="col my-auto" style="">
-								</div>
-								<div class="col my-auto" style="">
-									54,20%
-								</div>
-								<div class="col my-auto" style="font-size:18px;">
-									4.829
-								</div>
-								<div class="col my-auto" style="">
-									10.084
-								</div>
-								<div class="col my-auto" style="">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col my-auto" style="color: #fab81b">
-					<div class="" style="">
-						<div style="font-size: 17px;">1.</div>
-						<div style="font-size: 22px;">
-						jopacek
-						</div>
-						<p></p>
-						<i class="fas fa-user-alt" style="font-size:82px; color: rgba(255,255,255,0.4)"></i>
-						
-						<div class="top-player-banner" style="">
-							<div class="row">
-								<div class="col my-auto" style="">
-								</div>
-								<div class="col my-auto" style="">
-									<i class="fas fa-flag"></i>
-								</div>
-								<div class="col my-auto" style="">
-									<i class="fas fa-star"></i>
-								</div>
-								<div class="col my-auto" style="">
-									<i class="fas fa-play" title="Celkový počet bitev"></i>
-								</div>
-								<div class="col my-auto" style="">
-								</div>
-							</div>
-							<div class="row">
-								
-								<div class="col my-auto" style="">
-								</div>
-								<div class="col my-auto" style="">
-									49,05%
-								</div>
-								<div class="col my-auto" style="font-size:20px;">
-									5.480
-								</div>
-								<div class="col my-auto" style="">
-									58.202
-								</div>
-								<div class="col my-auto" style="">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col my-auto" style="color: #ff7e00">
-					<div class="" style="">
-						<div style="font-size: 15px;">3.</div>
-						<div style="font-size: 20px;">
-						michlak123
-						</div>
-						<p></p>
-						<i class="fas fa-user-alt" style="font-size:62px; color: rgba(255,255,255,0.4)"></i>
-						
-						<div class="top-player-banner" style="">
-							<div class="row">
-								<div class="col my-auto" style="">
-								</div>
-								<div class="col my-auto" style="">
-									<i class="fas fa-flag"></i>
-								</div>
-								<div class="col my-auto" style="">
-									<i class="fas fa-star"></i>
-								</div>
-								<div class="col my-auto" style="">
-									<i class="fas fa-play"></i>
-								</div>
-								<div class="col my-auto" style="">
-								</div>
-							</div>
-							<div class="row">
-								
-								<div class="col my-auto" style="">
-								</div>
-								<div class="col my-auto" style="">
-									50,18%
-								</div>
-								<div class="col my-auto" style="font-size:18px;">
-									4.527
-								</div>
-								<div class="col my-auto" style="">
-									17.068	
-								</div>
-								<div class="col my-auto" style="">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-			</div>
-		</div>
-	</div>
-</section>
--->
+
 
 
 
@@ -270,18 +115,21 @@ if (!isset($_SESSION['authenticate'])) {
 			<tbody>
  
  <?php 
-	for ($i = 0; $i <= $_SESSION['CLAN_DATA']['data'][$_SESSION['clan_id']]['members_count']-1; $i++){
-		
+	for ($i = 0; $i < $CLAN_DATA[8]; $i++){
+
+		$member = GET_MEMBER_INFO($CLAN_DATA_MEMBERS[$i]["account_id"]);
+		$member_random = json_decode($member[10], true);
+
 		echo 	'<tr>
-                    <th><img src="assets/img/'.$_SESSION['CLAN_DATA']['data'][$_SESSION['clan_id']]['members'][$i]['role_i18n'].'.png" height="30px"></th>
-                    <th>'.$_SESSION['CLAN_DATA']['data'][$_SESSION['clan_id']]['members'][$i]['account_name'].'</th>
+                    <th><img src="assets/img/'.$CLAN_DATA_MEMBERS[$i]["role"].'.png" height="30px"></th>
+                    <th>'.$member[3].'</th> 
+					<th></th> 
 					<th></th>
-					<th></th>
-                    <th>'.getGlobalRatingPlayer($_SESSION['CLAN_DATA']['data'][$_SESSION['clan_id']]['members'][$i]['account_id']).'</th>
-                    <th>'.getBattlesPlayer($_SESSION['CLAN_DATA']['data'][$_SESSION['clan_id']]['members'][$i]['account_id']).'</th>
+                    <th>'.$member[8].'</th>
+                    <th>'.$member_random["battles"].'</th>
                     
-                    <th>'.$_SESSION['CLAN_DATA']['data'][$_SESSION['clan_id']]['members'][$i]['role_i18n'].'</th>
-                    <th>'.date("d. m. Y, H:i",$_SESSION['CLAN_DATA']['data'][$_SESSION['clan_id']]['members'][$i]['joined_at']).'</th>
+                    <th>'.$CLAN_DATA_MEMBERS[$i]["role_i18n"].'</th>
+                    <th>'.date("d. m. Y, H:i",$member[6]).'</th>
   
 				</tr>';
 		

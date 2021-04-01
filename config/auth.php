@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	
-    require_once('wargaming.php');
+    require_once('wargaming_auth.php');
 
     $wargaming = new WargamingAuth();
 

@@ -10,12 +10,11 @@ if (!isset($_SESSION['authenticate'])) {
 ?>
 
 <?php include "parts/header.php";?>
-<?php include "parts/navigation.php";?>
-<?php include "parts/sidebar.php";?>
-<?php include 'config/config.php';?>
+
+
 <style>
 
-#dashboard {font-weight: bold; color:white;}
+#dashboard a{font-weight: bold; color:white;}
 </style>
 
 

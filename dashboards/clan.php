@@ -1,10 +1,12 @@
+<?php include "config/get_data_private.php";?>
+
 
 <style>
 
 .col {font-family: "Roboto Condensed", Arial, "Helvetica Neue", Helvetica, sans-serif;}
 .main-info .col span{font-size: 65px; font-weith: 700;}
 .clan-stat .col span{font-size: 30px; font-weith: 700;}
-#clan-dashboard {font-weight: bold; color:white;}
+#clan-dashboard a {font-weight: bold; color:white;}
 </style>
 
 
@@ -15,45 +17,25 @@
 			
 				<div class="col my-auto" style="">
 					<div>Aktivních hráčů</div>
-					<span><?php echo count($_SESSION['CLAN_DATA']['data'][$_SESSION['clan_id']]['private']['online_members']); ?></span>
+					<span><?php if($validity_token){
+							echo count($CLAN_DATA_PRIVATE['data'][$CLAN_DATA[1]]['private']['online_members']);
+						} ?>
 				</div>
 				
 				<div class="col">
-					<div style="font-size: 22px;"><?php echo $_SESSION['CLAN_DATA']['data'][$_SESSION['clan_id']]['name']; ?></div>
-					<div style="font-size: 25px; color: <?php echo $_SESSION['CLAN_DATA']['data'][$_SESSION['clan_id']]['color']; ?>;">[<?php echo $_SESSION['CLAN_DATA']['data'][$_SESSION['clan_id']]['tag']; ?>]</div>
+					<div style="font-size: 22px;"><?php echo $CLAN_DATA[14]; ?></div>
+					<div style="font-size: 25px; color: <?php echo $CLAN_DATA[16]; ?>;">[<?php echo $CLAN_DATA[15]; ?>]</div>
 					<p></p>
-					<img src="https://eu.wargaming.net/clans/media/clans/emblems/cl_145/500164145/emblem_195x195.png">
+					<img src="<?php echo $CLAN_DATA_EMBLEM["x195"]["portal"]; ?>">
 					<p></p>
 				</div>
 				
 				<div class="col my-auto">
 					<div>Celkem členu</div>
-					<span><?php echo $_SESSION['CLAN_DATA']['data'][$_SESSION['clan_id']]['members_count']; ?></span>
+					<span><?php echo $CLAN_DATA[8]; ?></span>
 				</div>
 				
 			</div>
-			<!--
-			<div class="row">
-				<div class="col my-auto">
-				</div>
-				<div class="col my-auto" style="">
-					<div style=" font-size: 14px; ">Zlaťáky</div>
-					<div style=" font-size: 16px; ">0 <img src="assets/img/gold.png"></div>
-				</div>
-				
-				<div class="col">
-					<div style=" font-size: 15px; font-weith: 700; "> Průmyslové zdroje</div>
-					<div style=" font-size: 18px; font-weith: 700; "> 60 696 <img src="assets/img/source.png"></div>
-				</div>
-				
-				<div class="col my-auto">
-					<div style=" font-size: 14px; ">Bony </div>
-					<div style=" font-size: 16px; ">0 <img src="assets/img/bony.png"></div>
-				</div>
-				<div class="col my-auto">
-				</div>
-			</div>
-			-->
 		</div>
 	</div>
 </section>
@@ -71,74 +53,32 @@
 		<div class="row">
 			<div class="col my-auto">
 				<div>Průměr bitev</div>
-				<span><?php echo $_SESSION['CLAN_STATISTIC_DATA']['data'][$_SESSION['clan_id']]['battles_count_avg']['value'] ?></span>
+				<span><?php echo $CLAN_DATA[10]; ?></span>
 			</div>
 			<div class="col my-auto">
 				<div>Průměrný poměr Vítězství/Bitev</div>
-				<span><?php echo $_SESSION['CLAN_STATISTIC_DATA']['data'][$_SESSION['clan_id']]['wins_ratio_avg']['value'] ?>%</span>
+				<span><?php echo $CLAN_DATA[11]; ?>%</span>
 			</div>
 			<div class="col my-auto" style="font-size: 19px;">
 				<div>Hodnocení klanu</div>
-				<span style="font-size: 45px;"><?php echo $_SESSION['CLAN_STATISTIC_DATA']['data'][$_SESSION['clan_id']]['efficiency']['value'] ?></span>
+				<span style="font-size: 45px;"><?php echo $CLAN_DATA[9]; ?></span>
 			</div>
 			<div class="col my-auto">
 				<div>Průměr vozidel 10T na hráče</div>
-				<span><?php echo $_SESSION['CLAN_STATISTIC_DATA']['data'][$_SESSION['clan_id']]['v10l_avg']['value'] ?></span>
+				<span><?php echo $CLAN_DATA[13]; ?></span>
 			</div>
 			<div class="col my-auto">
-				<div>Průměr bitev na hráče</div>
-				<span><?php echo $_SESSION['CLAN_STATISTIC_DATA']['data'][$_SESSION['clan_id']]['battles_count_avg_daily']['value'] ?></span>
+				<div>Průměrný počet bitev za den</div>
+				<span><?php echo $CLAN_DATA[12] ?></span>
 			</div>
 			
 		</div>
 	</div>
 
 </section>
-
-<section class="poster" style="margin: 80px 0 60px 0; ">
-	<div class="container">		
-		
-	<div class="text-center">
-	
-	
-		<div class="row">
-			
-			<?php 
-			
-			for ($i = 0; $i <= 2; $i++){
-			
-			if ($i <= count($_SESSION['MESSAGE_BOARD']['data'][$_SESSION['clan_id']])-1){
-			echo '
-				<div class="col my-auto dashboard-board-container">
-					<a href="clan-board.php" style="text-decoration : none">
-						<div style="">'.
-						 substr($_SESSION['MESSAGE_BOARD']['data'][$_SESSION['clan_id']][$i]['message'],0, 225). "..."
-						.'</div>
-					</a>
-				</div>';
-			} else {
-				echo '
-				<div class="col my-auto dashboard-board-container">
-					<a href="clan-board.php" style="text-decoration : none">
-						<div style="">
-							<div class="text-center">
-							Nic tu není
-							</div>
-						</div>
-					</a>
-				</div>';
-			}			
-				
-			};
-			
-			?>
-			
-			
-		</div>
-	</div>
-	</div>
-
-</section>
+<?php if($validity_token){
+ 	include "parts/private/board.php";
+} ?>
 <!--
 <section class="top-player" style="padding: 30px 0 20px 0; color: white; font-size: 15px;">
 			

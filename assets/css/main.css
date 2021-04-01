@@ -62,6 +62,7 @@ footer{
     height: 100%;
     /*margin-top: 62px;*/
     padding-top: 45px;
+	z-index: 999;
 }
 .menu_sublist.active {
     font-weight: bold;
