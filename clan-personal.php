@@ -6,10 +6,43 @@ if (!isset($_SESSION['authenticate'])) {
 	header('Location: index.php');
 	exit;
 }
+ include "parts/header.php";
+ 
+$executive_officer = 0;
+$private = 0;
+$recruit = 0;
+$junior_officer = 0;
+$combat_officer = 0;
+$reservist = 0;
+$other = 0;
 
-?>
+for ($i = 0; $i < $CLAN_DATA[8]; $i++){
 
-<?php include "parts/header.php";?>
+	if ($CLAN_DATA_MEMBERS[$i]["role"] == "executive_officer"){
+		$executive_officer++;
+	}
+	elseif ($CLAN_DATA_MEMBERS[$i]["role"] == "private"){
+		$private++;
+	}
+	elseif ($CLAN_DATA_MEMBERS[$i]["role"] == "recruit"){
+		$recruit++;
+	}
+	elseif ($CLAN_DATA_MEMBERS[$i]["role"] == "junior_officer"){
+		$junior_officer++;
+	}
+	elseif ($CLAN_DATA_MEMBERS[$i]["role"] == "combat_officer"){
+		$combat_officer++;
+	}
+	elseif ($CLAN_DATA_MEMBERS[$i]["role"] == "reservist"){
+		$reservist++;
+	}
+	else{
+		$other++;
+	}
+}
+ 
+ 
+ ?>
 
 <style>
 #clan-personal a{font-weight: bold; color:white;}
@@ -40,7 +73,7 @@ if (!isset($_SESSION['authenticate'])) {
 		</div>
 	</div>
 </section>
-<!--plánovaná funkce Počítatlo hráču ve hodnostích
+<!--Počítatlo hráču podle hodnostích-->
 	<section class="personal-info" style="color: white; font-size: 14px; background-color: #333; padding: 25px;">
 		<div class="container" style="">	
 			<div class="text-center">
@@ -51,35 +84,33 @@ if (!isset($_SESSION['authenticate'])) {
 			
 				<div class="col my-auto" style="">
 					<div>Výkonní důstojník</div>
-					<span>2</span>
+					<span><?php echo $executive_officer ?></span>
 				</div>
 				
 								
 				<div class="col my-auto">
 					<div>Bojový důstojník</div>
-					<span>1</span>
+					<span><?php echo $combat_officer ?></span>
 				</div>
 				
 				<div class="col my-auto" style="">
 					<div>Mladší důstojník</div>
-					<span>4</span>
+					<span><?php echo $executive_officer ?></span>
 				</div>
 				
 				<div class="col my-auto" style="">
 					<div>Vojín</div>
-					<span>6</span>
+					<span><?php echo $private ?></span>
 				</div>
 				
 				<div class="col my-auto" style="">
 					<div>Rekrut</div>
-					<span>7</span>
+					<span><?php echo $recruit ?></span>
 				</div>
 				
 				<div class="col my-auto" style="">
 					
 				</div>
-				
-				
 			</div>
 			</div>
 		</div>
@@ -87,7 +118,7 @@ if (!isset($_SESSION['authenticate'])) {
 		</div>
 	</div>
 </section>
--->
+
 
 
 
@@ -105,7 +136,7 @@ if (!isset($_SESSION['authenticate'])) {
 					<th></th>
                     <th>Hodnocení</th>
                     <th>Bitev</th>
-                    <!--<th>Vítězství</th> Plánovaná funkce -->
+                    <th>Vítězství</th>
                     <!--<th>WN8</th> Plánovaná funkce -->
                     <th>Hodnost</th>
                     <th>Připojen</th>
@@ -121,16 +152,16 @@ if (!isset($_SESSION['authenticate'])) {
 		$member_random = json_decode($member[10], true);
 
 		echo 	'<tr>
-                    <th><img src="assets/img/'.$CLAN_DATA_MEMBERS[$i]["role"].'.png" height="30px"></th>
+                    <th><img src="assets/img/'.$CLAN_DATA_MEMBERS[$i]["role"].'.png" height="30px"></th> 
                     <th>'.$member[3].'</th> 
 					<th></th> 
 					<th></th>
-                    <th>'.$member[8].'</th>
-                    <th>'.$member_random["battles"].'</th>
-                    
+                    <th>'.number_format($member[8], 0,","," ").'</th>
+                    <th>'.number_format($member_random["battles"], 0,","," ").'</th>
+                    <th><div class="'.barvicka_percent(number_format($member_random["winrate"], 2,","," ")).'" >'.number_format($member_random["winrate"], 2,","," ").' %</th>
                     <th>'.$CLAN_DATA_MEMBERS[$i]["role_i18n"].'</th>
                     <th>'.date("d. m. Y, H:i",$member[6]).'</th>
-  
+    
 				</tr>';
 		
 		

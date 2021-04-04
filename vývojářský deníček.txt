@@ -51,13 +51,17 @@ _Obsah_
 		| Přidan ID účtu vedle jména
 		| Změna názvu ikon klanových rolí z čestina na angličtinu
 		| Oprava zvýraznění aktivní stranky v sidebar
-		| Odstraněn WN algoritmus 
-
+		| Odstraněn WN algoritmus
+	0.4.2 (4. Dubna 2021)
+		| Přídán řádek z počtem hodnosti v clan-personal.php
+		| V clan-personal přidáno formátování čísel na tisíce, přidán sloupec winrate z funkci barvicka_percent
+		| Přidána funkce barvicka_percent do top-vehicle-bar a player-garage
+		| Přidáno formátování hodnost v Průměr bitev, Hodnocení klanu
+		| Nahrazen text za ikony v řádku součtu tanku ve player-garage 
 
 >_Pracuje se na
 
-	Propojení s Wargaming API
-	Optimalizace css
+	Nové funkce
 
 
 >_SESSION

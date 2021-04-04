@@ -14,7 +14,7 @@
 				<a href="#" style="text-decoration : none">
 					<img src="<?php echo $TopVehicles[1]["big_image"]; ?>">
 				</a>
-				<div class="" style="padding: 3px 0 3px 0; position: relative; top: -35px; border-left: 2px green solid; background-image: linear-gradient(to right,rgba(102,175,76,.23) 0%,transparent 63%); ">
+				<div class="<?php echo barvicka_percent(number_format($TopVehicles[1]["winrate"]));?>" style="padding: 3px 0 3px 0; position: relative; top: -35px;">
 					<div class="row">
 						<div class="col my-auto" style="padding: 0!important;"></div>
 						<div class="col my-auto" style="font-size: 10px;  padding: 0!important;"> W/B </div>
@@ -24,7 +24,7 @@
 					</div>
 					<div class="row">
 						<div class="col my-auto" style="padding: 0!important;"></div>
-						<div class="col my-auto" style="font-size: 20px;  padding: 0!important;"> 
+						<div class="col my-auto " style="font-size: 20px;  padding: 0!important;"> 
 							<?php echo number_format($TopVehicles[1]["winrate"], 2,"."," "); ?>%
 						</div>
 						<div class="col my-auto" style="font-size: 25px;  padding: 0!important;"> 
@@ -45,7 +45,7 @@
 				<a href="#" style="text-decoration : none">
 					<img src="<?php echo $TopVehicles[0]["big_image"]; ?>" width="55%">
 				</a>
-				<div class="" style="padding: 3px 0 3px 0;position: relative; top: -35px; border-left: 2px green solid; background-image: linear-gradient(to right,rgba(102,175,76,.23) 0%,transparent 63%); ">
+				<div class="<?php echo barvicka_percent(number_format($TopVehicles[0]["winrate"]));?>" style="padding: 3px 0 3px 0;position: relative; top: -35px;">
 					<div class="row">
 						<div class="col my-auto" style="padding: 0!important;"></div>
 						<div class="col my-auto" style="font-size: 10px; padding: 0!important;">W/B</div>
@@ -77,7 +77,7 @@
 				<a href="#" style="text-decoration : none">
 					<img src="<?php echo $TopVehicles[2]["big_image"]; ?>">
 				</a>
-				<div class="" style="padding: 3px 0 3px 0; position: relative; top: -35px; border-left: 2px green solid; background-image: linear-gradient(to right,rgba(102,175,76,.23) 0%,transparent 63%); ">
+				<div class="<?php echo barvicka_percent(number_format($TopVehicles[2]["winrate"]));?>" style="padding: 3px 0 3px 0; position: relative; top: -35px;">
 					<div class="row">
 						<div class="col my-auto" style="padding: 0!important;"></div>
 						<div class="col my-auto" style="font-size: 10px; padding: 0!important;"> W/B </div>

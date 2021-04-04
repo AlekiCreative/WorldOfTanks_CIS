@@ -19,7 +19,7 @@
 					<div>Aktivních hráčů</div>
 					<span><?php if($validity_token){
 							echo count($CLAN_DATA_PRIVATE['data'][$CLAN_DATA[1]]['private']['online_members']);
-						} ?>
+						}else echo "0"; ?>
 				</div>
 				
 				<div class="col">
@@ -53,7 +53,7 @@
 		<div class="row">
 			<div class="col my-auto">
 				<div>Průměr bitev</div>
-				<span><?php echo $CLAN_DATA[10]; ?></span>
+				<span><?php echo number_format($CLAN_DATA[10], 0,","," "); ?></span>
 			</div>
 			<div class="col my-auto">
 				<div>Průměrný poměr Vítězství/Bitev</div>
@@ -61,7 +61,7 @@
 			</div>
 			<div class="col my-auto" style="font-size: 19px;">
 				<div>Hodnocení klanu</div>
-				<span style="font-size: 45px;"><?php echo $CLAN_DATA[9]; ?></span>
+				<span style="font-size: 45px;"><?php echo number_format($CLAN_DATA[9], 0,","," "); ?></span>
 			</div>
 			<div class="col my-auto">
 				<div>Průměr vozidel 10T na hráče</div>

@@ -80,7 +80,7 @@ for ($i = 0; $i < count($ACCOUNT_VEHICLE); $i++){
 			<div class="row" style="font-size: 14px;">
 				<div class="col my-auto">
 					<div class="">
-						Medka
+					<img src="assets/img/mediumTank.png" height="30px">
 					</div>
 					<div class="">
 						<?php echo $mediumTank; ?>
@@ -88,7 +88,7 @@ for ($i = 0; $i < count($ACCOUNT_VEHICLE); $i++){
 				</div>
 				<div class="col my-auto">
 					<div class="">
-						Lehky
+					<img src="assets/img/lightTank.png" height="30px">
 					</div>
 					<div class="">
 						<?php echo $lightTank; ?>
@@ -96,7 +96,7 @@ for ($i = 0; $i < count($ACCOUNT_VEHICLE); $i++){
 				</div>
 				<div class="col my-auto">
 					<div class="">
-						Težšký
+					<img src="assets/img/heavyTank.png" height="30px">
 					</div>
 					<div class="">
 						<?php echo $heavyTank; ?>
@@ -104,7 +104,7 @@ for ($i = 0; $i < count($ACCOUNT_VEHICLE); $i++){
 				</div>
 				<div class="col my-auto">
 					<div class="">
-						TD
+					<img src="assets/img/AT-SPG.png" height="30px">
 					</div>
 					<div class="">
 						<?php echo $AT; ?>
@@ -112,7 +112,7 @@ for ($i = 0; $i < count($ACCOUNT_VEHICLE); $i++){
 				</div>
 				<div class="col my-auto">
 					<div class="">
-						SPG
+					<img src="assets/img/SPG.png" height="30px">
 					</div>
 					<div class="">
 						<?php echo $SPG; ?>
@@ -135,7 +135,7 @@ for ($i = 0; $i < count($ACCOUNT_VEHICLE); $i++){
 				
 				<div class="col my-auto">
 					<div class="">
-						Mko
+					<img src="assets/img/4.png" width="26px">
 					</div>
 					<div class="">
 					<?php echo $master; ?>
@@ -144,7 +144,7 @@ for ($i = 0; $i < count($ACCOUNT_VEHICLE); $i++){
 
 				<div class="col my-auto">
 					<div class="">
-						1st
+					<img src="assets/img/3.png" width="26px">
 					</div>
 					<div class="">
 						<?php echo $one; ?>
@@ -153,7 +153,7 @@ for ($i = 0; $i < count($ACCOUNT_VEHICLE); $i++){
 				
 				<div class="col my-auto">
 					<div class="">
-						2nd
+					<img src="assets/img/2.png" width="26px">
 					</div>
 					<div class="">
 						<?php echo $two; ?>
@@ -162,7 +162,7 @@ for ($i = 0; $i < count($ACCOUNT_VEHICLE); $i++){
 				
 				<div class="col my-auto">
 					<div class="">
-						3rd
+					<img src="assets/img/1.png" width="26px">
 					</div>
 					<div class="">
 						<?php echo $three; ?>
@@ -217,7 +217,7 @@ for ($i = 0; $i < count($ACCOUNT_VEHICLE); $i++){
 							<th>'.$ACCOUNT_VEHICLE[$i]['tier'].'</th>
 							<th><img src="assets/img/'.$ACCOUNT_VEHICLE[$i]['nation'].'.png" height="30px"></th>
 							<th><img src="assets/img/'.$ACCOUNT_VEHICLE[$i]['mark_of_mastery'].'.png" width="26px"></th>
-							<th><div class="prumerne" >'.number_format($ACCOUNT_VEHICLE[$i]['random']['winrate'], 2,","," ") .'%</div></th>
+							<th><div class="'.barvicka_percent(number_format($ACCOUNT_VEHICLE[$i]['random']['winrate'], 2,","," ")).'" >'.number_format($ACCOUNT_VEHICLE[$i]['random']['winrate'], 2,","," ") .'%</div></th>
 		  
 						</tr>';
 				}
