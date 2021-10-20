@@ -144,7 +144,7 @@ Distributed under the GNU General Public License v3.0. See `LICENSE` for more in
   </a>
   
   <a href="https://www.youtube.com/channel/UCVm5Zv6LHJw9iO5iNQADR0g">
-    <img src="https://www.searchpng.com/wp-content/uploads/2019/02/Youtube-Black-Icon-PNG-715x715.png" alt="Logo" width="50px" height="50px">
+    <img src="https://img.pngio.com/white-youtube-icon-png-39700-free-icons-library-white-youtube-png-1600_1600.jpg" alt="Logo" width="50px" height="50px">
   </a>
   
 </p>
