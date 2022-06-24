@@ -1,13 +1,14 @@
-![version-shield]
-![languages-shield]
-.
+
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <a href="http://wot-cis.alespavlik.cz/">
     <img src="http://wot-cis.alespavlik.cz/img/cis-logo.png" alt="Logo" width="111px" height="150px">
   </a>
-
+  
+  
+  <h3 align="center">!!! Development canceled !!!</h3>
+  
   <h3 align="center">WoT CIS</h3>
 
   <p align="center">
@@ -149,5 +150,3 @@ Distributed under the GNU General Public License v3.0. See `LICENSE` for more in
   
 </p>
 
-[version-shield]: https://ctrlv.cz/shots/2021/02/01/pBqP.png
-[languages-shield]:https://ctrlv.cz/shots/2021/02/01/upMD.png
